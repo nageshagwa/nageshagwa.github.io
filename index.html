@@ -1,35 +1,151 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WPS 电脑版 - 官方资源与在线工具</title>
-<meta name="description" content="WPS相关资源导航：官网入口与免费在线小工具。WPS Office 是一套办公软件，包含文字、表格、演示等组件，兼容主流文档格">
+<title>字数统计工具 - 在线统计中英文字数/字符/段落 + 大小写换行转换</title>
+<meta name="description" content="免费在线字数统计与文本转换：实时统计中文字数、英文单词、字符（计/不计空格）、行数、段落、UTF-8 字节，并支持大小写、首字母、整行去空白与去空行等转换。纯本地运行、不上传，给 WPS 等办公文档做字数核对。">
 <link rel="canonical" href="https://nageshagwa.github.io/">
-<meta property="og:title" content="WPS 电脑版">
-<meta property="og:description" content="WPS官网入口与免费在线小工具。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="字数统计工具 - 在线统计中英文字数/字符/段落 + 大小写换行转换">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nageshagwa.github.io/">
-<style>:root{--b:#1a73e8}*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#1f2937;line-height:1.7;background:#fff}h1{color:var(--b);font-size:1.6rem;margin:.2em 0}h2{font-size:1.2rem;margin-top:1.6em;border-left:4px solid var(--b);padding-left:10px}.card{border:1px solid #e5e7eb;border-radius:10px;padding:18px;margin:16px 0;background:#fafafa}a{color:var(--b)}footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;color:#9ca3af;font-size:.85rem}</style>
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "在线字数统计与文本转换",
+   "url": "https://nageshagwa.github.io/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "zh-Hans",
+   "description": "免费在线字数统计与文本转换：实时统计中文字数、英文单词、字符（计/不计空格）、行数、段落、UTF-8 字节，并支持大小写、首字母、整行去空白与去空行等转换。纯本地运行、不上传，给 WPS 等办公文档做字数核对。",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hans",
+   "url": "https://nageshagwa.github.io/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "这个字数统计工具会上传我的文本吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不会。所有统计与转换都在你浏览器里用 JavaScript 本地完成，文本不会发送到任何服务器，关闭页面即清除。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "中文字数是怎么算的？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "落在中日韩统一表意文字、扩展区、假名与谚文区段的每个字符各计为 1 个「中文字符」，与 WPS / Word 的「中文字符和朝鲜语单词」口径一致。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "「字数」和「字符数」有什么区别？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "字符数数的是每一个字符（含空格、标点）；字数 = 中文字符数 + 西文单词数，更接近论文或稿费里说的「字数」。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "和 WPS、Word 的字数统计结果一样吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "对纯中文或纯英文文本通常一致；中英混排、含大量符号或全角字符时可能有个位数差异，因为各家对标点与空白的归类略有不同。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "能统计英文单词数吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以。去掉中文字符后，按空白切分出的连续片段即为西文单词，适合英文论文与摘要的词数限制核对。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UTF-8 字节数有什么用？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "数据库字段、表单与接口常按字节限长。一个英文字母占 1 字节，一个中文字符通常占 3 字节，字节数能帮你避免超限被截断。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
-<body>
-<h1>WPS</h1>
-<p>WPS Office 是一套办公软件，包含文字、表格、演示等组件，兼容主流文档格式。</p>
-<div class="card">
-<h2 style="margin-top:0;border:0;padding:0">官方网站</h2>
-<p>访问 WPS 官方网站，了解完整功能与下载方式：<br>
-<a href="https://wpsofficepro.com/"><strong>wpsofficepro.com</strong></a></p>
+<body><div class="wrap"><main>
+<nav class="lang">语言： <strong>简体中文</strong> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>在线字数统计与文本转换工具</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_zh.webp"><img src="/img/cover_zh.png" alt="在线字数统计与文本转换工具示意图" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>图：在线字数统计与文本转换（中英文字数 · 字符 · 段落）</figcaption></figure>
+<p>把文本粘进下面的输入框，即可<strong>实时</strong>看到字符数、中文字数、英文单词、行数、段落与 UTF-8 字节，并一键做大小写、首字母大写、去空白、去空行等转换。全部在你的浏览器本地完成，<strong>不上传服务器</strong>，适合给论文、简历、表单、社媒文案与 WPS 文档做字数核对。</p>
+<textarea id="wc-input" placeholder="在此粘贴或输入文本，统计结果实时更新…" autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">字符数（计空格）</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">字符数（不计空格）</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">中文字符</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">字数（中文字+西文词）</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">行数</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">段落</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 字节</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">预计阅读</div></div></div>
+<h2>文本转换</h2>
+<div class="ops"><button data-op="upper">全大写</button><button data-op="lower">全小写</button><button data-op="title">每词首字母大写</button><button data-op="sentence">句首大写</button><button data-op="trim">去行首尾空白</button><button data-op="collapse">合并多余空格</button><button data-op="blank">删除空行</button><button data-op="sort">按行排序</button><button data-op="copy" class="pri">复制结果</button><button data-op="clear">清空</button></div>
+<h2>计数是怎么算出来的</h2>
+<p>工具先按换行把文本切成行与段落，再逐个字符扫描：落在中日韩统一表意文字、假名、谚文等区段的字符按「中文字符」单独计 1；其余按空白切分出的连续片段算 1 个西文单词。这与 WPS、Microsoft Word「字数统计」里「中文字符和朝鲜语单词」+「英文单词」的口径一致，因此中英混排也能数准。</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="图1：输入 → 逐字符扫描 → 分类（中文字 / 西文词）→ 汇总统计" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">输入文本</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">逐字符扫描</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">分类：中文字 / 西文词</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">汇总统计</text></svg><figcaption>图1：输入 → 逐字符扫描 → 分类（中文字 / 西文词）→ 汇总统计</figcaption></figure>
+<h2>什么会被算进去</h2>
+<p>字符数（计空格）数所有字符，包括空格与标点；字符数（不计空格）去掉所有空白；中文字符只数表意文字与假名/谚文；段落按空行分隔。换行符 CR/LF、制表符等不可见字符也会影响字节数，但默认不计入「字数」。</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_zh.webp"><img src="/img/board_zh.png" alt="字数统计计数口径示意图" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>图：中文字与西文词各计 1，中英混排也数得准</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="图2：各类内容如何被计入字数统计" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">计数口径</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">中文字符 = 各计 1</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">西文单词 = 各计 1</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">空格：计入字符数、不计字数</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">空行 = 段落分隔</text></svg><figcaption>图2：各类内容如何被计入字数统计</figcaption></figure>
+<h2 id="i4data">字数与阅读时长参考估算（2026）</h2>
+<p>下面几个常用口径可帮你快速判断篇幅。阅读时长按「字数 ÷ 速度」估算，工具默认用每分钟约 200 词。</p>
+<table class="data"><tbody>
+<tr><td>英文静默阅读速度</td><td>≈ 238 词/分钟</td><td class="note">源自阅读速率荟萃研究（Brysbaert, 2019）</td></tr>
+<tr><td>中文默认阅读速度</td><td>≈ 255 字/分钟</td><td class="note">公开估算口径</td></tr>
+<tr><td>一页 A4（12pt 单倍行距）</td><td>≈ 500 词 / 800 字</td><td class="note">常见排版估算</td></tr>
+<tr><td>社媒单条字符上限（参考）</td><td>280 / 140 字符</td><td class="note">平台公开规则、可能变动</td></tr>
+<tr><td>搜索结果摘要显示长度</td><td>≈ 155 字符</td><td class="note">经验估算（约 920 像素）</td></tr>
+</tbody></table>
+<p class="note">以上为公开资料综合估算、非一手实测，仅供参考；平台规则可能随时间变动。</p>
+<h2>常见问题</h2>
+<dl class="faq">
+<dt>这个字数统计工具会上传我的文本吗？</dt><dd>不会。所有统计与转换都在你浏览器里用 JavaScript 本地完成，文本不会发送到任何服务器，关闭页面即清除。</dd>
+<dt>中文字数是怎么算的？</dt><dd>落在中日韩统一表意文字、扩展区、假名与谚文区段的每个字符各计为 1 个「中文字符」，与 WPS / Word 的「中文字符和朝鲜语单词」口径一致。</dd>
+<dt>「字数」和「字符数」有什么区别？</dt><dd>字符数数的是每一个字符（含空格、标点）；字数 = 中文字符数 + 西文单词数，更接近论文或稿费里说的「字数」。</dd>
+<dt>和 WPS、Word 的字数统计结果一样吗？</dt><dd>对纯中文或纯英文文本通常一致；中英混排、含大量符号或全角字符时可能有个位数差异，因为各家对标点与空白的归类略有不同。</dd>
+<dt>能统计英文单词数吗？</dt><dd>可以。去掉中文字符后，按空白切分出的连续片段即为西文单词，适合英文论文与摘要的词数限制核对。</dd>
+<dt>UTF-8 字节数有什么用？</dt><dd>数据库字段、表单与接口常按字节限长。一个英文字母占 1 字节，一个中文字符通常占 3 字节，字节数能帮你避免超限被截断。</dd>
+</dl>
+<h2>什么时候用得上</h2>
+<ul class="scenes"><li>核对论文 / 报告是否满足规定字数或词数限制。</li><li>压缩简历到一页：盯住字符数与行数，删到合适篇幅。</li><li>写社媒文案时控制单条字符上限，避免被截断。</li><li>为 SEO 标题与描述把字符数控制在显示范围内。</li><li>做大小写 / 首字母转换，快速规范英文标题与表头。</li></ul>
+<div class="related"><h2>相关链接</h2>
+<div class="cta">需要在桌面端做更完整的字数统计、排版与多格式编辑？可以下载 WPS Office： <a href="https://wpsofficepro.com/download/">下载 WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">WPS 官网</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">WPS 功能介绍</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS 常见问题</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">Unicode 文本分段标准 UAX #29</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Microsoft Word 字数统计说明</a></li></ul></div>
+</main>
+<footer>由 Evan Lin 整理校订。计数口径参考 WPS 官方帮助、Microsoft Word「字数统计」说明与 Unicode 文本分段标准（UAX #29），均为公开资料、仅供参考。本工具纯本地运行、不上传文本。<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
 </div>
-<div class="card">
-<h2 style="margin-top:0;border:0;padding:0">免费在线小工具</h2>
-<p>本站还为 WPS 用户提供一个纯本地运行的小工具（数据不上传）：<br>
-<a href="https://nageshagwa.github.io/wpsofficepro-word-count/">在线字数统计 →</a></p>
-</div>
-<h2>关于 WPS</h2>
-<p>WPS Office 是一套办公软件，包含文字、表格、演示等组件，兼容主流文档格式。 更多信息与下载请访问 <a href="https://wpsofficepro.com/">WPS官网</a>。</p>
-<footer>
-<p>本页为 WPS 相关资源导航页，工具均在本地浏览器处理、不上传服务器。</p>
-<p>官网：<a href="https://wpsofficepro.com/">wpsofficepro.com</a> · 最后更新：2026-06</p>
-</footer>
-</body>
-</html>
+<script>window.I18N={"readUnit": "分钟", "copied": "已复制"};</script><script src="/app.js"></script>
+</body></html>
