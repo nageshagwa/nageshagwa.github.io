@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="fil"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter - Online na Character, Word at Paragraph Count + Case Converter</title>
+<meta name="description" content="Libreng online na salita at character counter na may text conversion: bilangin ang mga Chinese na character, English na salita, mga character (na may/walang mga puwang), mga linya, mga talata at UTF-8 byte sa real time, kasama ang case, capitalization, trim at blank-line na mga tool. Gumagana nang lokal, walang na-upload - madaling gamitin para sa pagsuri ng mga dokumento ng WPS at Office.">
+<link rel="canonical" href="https://nageshagwa.github.io/fil/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Word Counter - Online na Character, Word at Paragraph Count + Case Converter">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Online na Word Counter at Text Converter",
+   "url": "https://nageshagwa.github.io/fil/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "fil",
+   "description": "Libreng online na salita at character counter na may text conversion: bilangin ang mga Chinese na character, English na salita, mga character (na may/walang mga puwang), mga linya, mga talata at UTF-8 byte sa real time, kasama ang case, capitalization, trim at blank-line na mga tool. Gumagana nang lokal, walang na-upload - madaling gamitin para sa pagsuri ng mga dokumento ng WPS at Office.",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fil",
+   "url": "https://nageshagwa.github.io/fil/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Ina-upload ba ng word counter na ito ang aking text?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi. Lahat ng pagbibilang at conversion ay tumatakbo nang lokal sa iyong browser gamit ang JavaScript; ang iyong teksto ay hindi kailanman ipinadala sa anumang server at na-clear kapag isinara mo ang pahina."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Paano binibilang ang mga character na Tsino?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang bawat character sa CJK ideograph, extension, kana at Hangul range ay binibilang bilang isang Chinese character, na tumutugma sa sukat na \"Mga character na Chinese at Korean na salita\" sa WPS at Word."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ano ang pagkakaiba ng mga salita at karakter?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Binibilang ng mga character ang bawat karakter kabilang ang mga puwang at bantas; ang mga salita ay katumbas ng mga character na Tsino at mga salitang Kanluranin, na mas malapit sa bilang ng salitang ginagamit para sa mga sanaysay o bayad na pagsulat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tumutugma ba ito sa bilang ng salita sa WPS at Word?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para sa purong Chinese o purong Ingles na teksto ito ay karaniwang tumutugma; na may halo-halong text, maraming simbolo o full-width na character ay maaaring may maliit na pagkakaiba, dahil bahagyang naiiba ang pag-uuri ng bawat tool sa mga bantas at espasyo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mabibilang ba nito ang mga salitang Ingles?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oo. Pagkatapos alisin ang mga CJK na character, ang bawat whitespace-delimited run ay isang Western word, na madaling gamitin para sa mga limitasyon ng salita sa mga English essay at abstract."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Para saan ang bilang ng UTF-8 byte?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kadalasang nililimitahan ng mga field ng database, form at API ang haba ayon sa mga byte. Ang isang Latin na titik ay tumatagal ng 1 byte at ang isang Chinese na character ay karaniwang tumatagal ng 3, kaya ang bilang ng byte ay nakakatulong sa iyo na maiwasang maputol."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Wika: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <strong>Filipino</strong> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>Online na Word Counter at Text Converter</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_fil.webp"><img src="/img/cover_fil.png" alt="Online na word counter at paglalarawan ng text converter" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Fig: online na word counter at text converter (CJK at Latin na salita, character, talata)</figcaption></figure>
+<p>I-paste ang iyong text sa kahon sa ibaba upang makita ang mga character, Chinese character, English na salita, linya, talata at UTF-8 bytes na update sa <strong>real time</strong>, at i-convert ang case, capitalization, whitespace at blangkong linya sa isang click. Lahat ay tumatakbo nang lokal sa iyong browser at <strong>walang na-upload</strong> - perpekto para sa pagsuri ng mga sanaysay, resume, form, social post at mga dokumento ng WPS.</p>
+<textarea id="wc-input" placeholder="I-paste o i-type ang text dito - ang bilang ng update habang nagta-type ka..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">Mga character (na may mga puwang)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">Mga character (walang puwang)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">mga character na Tsino</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">Mga Salita (CJK chars + Western words)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">Mga linya</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">Mga talata</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 byte</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">Oras ng pagbabasa</div></div></div>
+<h2>Pag-convert ng teksto</h2>
+<div class="ops"><button data-op="upper">UPPERCASE</button><button data-op="lower">maliit na titik</button><button data-op="title">Kaso ng Pamagat</button><button data-op="sentence">Kaso ng pangungusap</button><button data-op="trim">I-trim ang mga puwang ng linya</button><button data-op="collapse">I-collapse ang mga puwang</button><button data-op="blank">Alisin ang mga blangkong linya</button><button data-op="sort">Pagbukud-bukurin ang mga linya</button><button data-op="copy" class="pri">Kopyahin ang resulta</button><button data-op="clear">Maaliwalas</button></div>
+<h2>Paano kinakalkula ang mga bilang</h2>
+<p>Hinahati muna ng tool ang text sa mga linya at mga talata ayon sa mga line break, pagkatapos ay ini-scan ang character ayon sa character: anuman sa CJK ideograph, kana o Hangul range ay binibilang bilang isang Chinese character, habang ang bawat whitespace-delimited run sa ibang lugar ay binibilang bilang isang Western word. Tumutugma ito sa "mga character na Tsino at mga salitang Korean" kasama ang lohika ng "mga salitang Ingles" sa bilang ng salita sa WPS at Microsoft Word, kaya tama rin ang bilang ng pinaghalong teksto.</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 1: input -> i-scan ang bawat character -> classify (CJK char / Western word) -> mga kabuuan" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Mag-input ng text</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">I-scan ang bawat k</text><text x="302" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">arakter</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Uriin: CJK char / </text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Western word</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Mga kabuuan</text></svg><figcaption>Fig 1: input -&gt; i-scan ang bawat character -&gt; classify (CJK char / Western word) -&gt; mga kabuuan</figcaption></figure>
+<h2>Kung ano ang binibilang</h2>
+<p>Binibilang ng mga character (na may mga puwang) ang bawat karakter kabilang ang mga puwang at bantas; ang mga character (walang mga puwang) ay bumaba sa lahat ng whitespace; Ang mga character na Tsino ay binibilang lamang ang mga ideograph at kana/Hangul; ang mga talata ay pinaghihiwalay ng mga blangkong linya. Ang mga hindi nakikitang character tulad ng CR/LF at mga tab ay nakakaapekto sa bilang ng byte ngunit hindi binibilang bilang mga salita bilang default.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_fil.webp"><img src="/img/board_fil.png" alt="Ilustrasyon ng lohika na bilang ng salita" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Fig: isang CJK char at isang Western na salita ang bawat isa ay binibilang bilang 1, kaya ang pinaghalong teksto ay binibilang nang tama</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 2: kung paano binibilang ang bawat uri ng nilalaman" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">Pagbibilang ng lohika</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">CJK character = 1 bawat isa</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">Kanluraning salita = 1 bawat isa</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">Space: binibilang bilang isang karakter, hindi isang salita</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">Blangkong linya = putol ng talata</text></svg><figcaption>Fig 2: kung paano binibilang ang bawat uri ng nilalaman</figcaption></figure>
+<h2 id="i4data">Mga pagtatantya ng sanggunian sa bilang ng salita at oras ng pagbasa (2026)</h2>
+<p>Ang ilang karaniwang figure ay makakatulong sa iyo na husgahan ang haba sa isang sulyap. Ang oras ng pagbabasa ay tinatantya bilang mga salita na hinati sa bilis, na nagde-default sa humigit-kumulang 200 salita bawat minuto.</p>
+<table class="data"><tbody>
+<tr><td>Ang bilis ng pagbasa ng tahimik sa Ingles</td><td>≈ 238 words/min</td><td class="note">mula sa isang meta-analysis na rate ng pagbasa (Brysbaert, 2019)</td></tr>
+<tr><td>Default na bilis ng pagbasa ng Chinese</td><td>≈ 255 chars/min</td><td class="note">karaniwang pampublikong pagtatantya</td></tr>
+<tr><td>Isang A4 page (12pt, single spacing)</td><td>≈ 500 words / 800 chars</td><td class="note">tipikal na pagtatantya ng pag-type</td></tr>
+<tr><td>Limitasyon ng character sa social post (sanggunian)</td><td>280 / 140 characters</td><td class="note">public platform rule, maaaring magbago</td></tr>
+<tr><td>Haba ng display ng snippet ng paghahanap</td><td>≈ 155 characters</td><td class="note">panuntunan ng thumb (mga 920 pixels)</td></tr>
+</tbody></table>
+<p class="note">Ang mga ito ay mga pagtatantya na pinagsama-sama mula sa mga pampublikong pinagmumulan, hindi mga unang-kamay na sukat, at para sa sanggunian lamang; maaaring magbago ang mga panuntunan sa platform sa paglipas ng panahon.</p>
+<h2>Mga madalas itanong</h2>
+<dl class="faq">
+<dt>Ina-upload ba ng word counter na ito ang aking text?</dt><dd>Hindi. Lahat ng pagbibilang at conversion ay tumatakbo nang lokal sa iyong browser gamit ang JavaScript; ang iyong teksto ay hindi kailanman ipinadala sa anumang server at na-clear kapag isinara mo ang pahina.</dd>
+<dt>Paano binibilang ang mga character na Tsino?</dt><dd>Ang bawat character sa CJK ideograph, extension, kana at Hangul range ay binibilang bilang isang Chinese character, na tumutugma sa sukat na "Mga character na Chinese at Korean na salita" sa WPS at Word.</dd>
+<dt>Ano ang pagkakaiba ng mga salita at karakter?</dt><dd>Binibilang ng mga character ang bawat karakter kabilang ang mga puwang at bantas; ang mga salita ay katumbas ng mga character na Tsino at mga salitang Kanluranin, na mas malapit sa bilang ng salitang ginagamit para sa mga sanaysay o bayad na pagsulat.</dd>
+<dt>Tumutugma ba ito sa bilang ng salita sa WPS at Word?</dt><dd>Para sa purong Chinese o purong Ingles na teksto ito ay karaniwang tumutugma; na may halo-halong text, maraming simbolo o full-width na character ay maaaring may maliit na pagkakaiba, dahil bahagyang naiiba ang pag-uuri ng bawat tool sa mga bantas at espasyo.</dd>
+<dt>Mabibilang ba nito ang mga salitang Ingles?</dt><dd>Oo. Pagkatapos alisin ang mga CJK na character, ang bawat whitespace-delimited run ay isang Western word, na madaling gamitin para sa mga limitasyon ng salita sa mga English essay at abstract.</dd>
+<dt>Para saan ang bilang ng UTF-8 byte?</dt><dd>Kadalasang nililimitahan ng mga field ng database, form at API ang haba ayon sa mga byte. Ang isang Latin na titik ay tumatagal ng 1 byte at ang isang Chinese na character ay karaniwang tumatagal ng 3, kaya ang bilang ng byte ay nakakatulong sa iyo na maiwasang maputol.</dd>
+</dl>
+<h2>Kapag ito ay kapaki-pakinabang</h2>
+<ul class="scenes"><li>Suriin kung ang isang sanaysay o ulat ay nakakatugon sa kinakailangang limitasyon ng salita o karakter.</li><li>I-trim ang isang resume sa isang pahina sa pamamagitan ng panonood sa bilang ng karakter at linya.</li><li>Panatilihin ang mga social post sa ilalim ng per-post na limitasyon ng character upang hindi maputol ang mga ito.</li><li>Panatilihin ang mga pamagat at paglalarawan ng SEO sa loob ng ipinapakitang hanay ng character.</li><li>I-convert ang case at capitalization para mabilis na maayos ang mga pamagat at header sa English.</li></ul>
+<div class="related"><h2>Mga kaugnay na link</h2>
+<div class="cta">Kailangan ng mas buong bilang ng salita, layout at multi-format na pag-edit sa desktop? I-download ang WPS Office: <a href="https://wpsofficepro.com/download/">I-download ang WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">Opisyal na site ng WPS</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">Mga tampok ng WPS</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">FAQ ng WPS</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">Unicode Text Segmentation (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Tulong sa bilang ng salita sa Microsoft Word</a></li></ul></div>
+</main>
+<footer>Inedit ni Evan Lin. Nagbibilang ng mga logic reference WPS opisyal na tulong, ang Microsoft Word word count documentation at ang Unicode Text Segmentation standard (UAX #29), lahat ng pampublikong pinagmumulan at para sa sanggunian lamang. Ang tool na ito ay ganap na gumagana nang lokal at walang ina-upload.<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "min", "copied": "Kinopya"};</script><script src="/app.js"></script>
+</body></html>
