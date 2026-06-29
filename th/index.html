@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ตัวนับคำ - ตัวอักษรออนไลน์ จำนวนคำและย่อหน้า + ตัวแปลงตัวพิมพ์เล็ก</title>
+<meta name="description" content="ตัวนับคำและอักขระออนไลน์ฟรีพร้อมการแปลงข้อความ: นับตัวอักษรจีน คำภาษาอังกฤษ ตัวอักษร (มี/ไม่เว้นวรรค) บรรทัด ย่อหน้า และไบต์ UTF-8 แบบเรียลไทม์ พร้อมเครื่องมือตัวพิมพ์เล็กและตัวพิมพ์ใหญ่ ตัดแต่ง และบรรทัดว่าง ทำงานภายในเครื่อง โดยไม่มีการอัปโหลดใดๆ มีประโยชน์สำหรับการตรวจสอบเอกสาร WPS และ Office">
+<link rel="canonical" href="https://nageshagwa.github.io/th/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="ตัวนับคำ - ตัวอักษรออนไลน์ จำนวนคำและย่อหน้า + ตัวแปลงตัวพิมพ์เล็ก">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "ตัวนับคำและตัวแปลงข้อความออนไลน์",
+   "url": "https://nageshagwa.github.io/th/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "th",
+   "description": "ตัวนับคำและอักขระออนไลน์ฟรีพร้อมการแปลงข้อความ: นับตัวอักษรจีน คำภาษาอังกฤษ ตัวอักษร (มี/ไม่เว้นวรรค) บรรทัด ย่อหน้า และไบต์ UTF-8 แบบเรียลไทม์ พร้อมเครื่องมือตัวพิมพ์เล็กและตัวพิมพ์ใหญ่ ตัดแต่ง และบรรทัดว่าง ทำงานภายในเครื่อง โดยไม่มีการอัปโหลดใดๆ มีประโยชน์สำหรับการตรวจสอบเอกสาร WPS และ Office",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "th",
+   "url": "https://nageshagwa.github.io/th/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ตัวนับคำนี้อัปโหลดข้อความของฉันหรือไม่",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ไม่ การนับและการแปลงทั้งหมดทำงานภายในเบราว์เซอร์ของคุณด้วย JavaScript ข้อความของคุณจะไม่ถูกส่งไปยังเซิร์ฟเวอร์ใด ๆ และจะถูกล้างเมื่อคุณปิดหน้า"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ตัวอักษรจีนนับอย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "อักขระแต่ละตัวในอักษรภาพ ส่วนขยาย ช่วงคานะ และอังกูลของ CJK นับเป็นอักขระจีนหนึ่งตัว ซึ่งตรงกับหน่วยวัด \"อักขระจีนและคำภาษาเกาหลี\" ใน WPS และ Word"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "คำและตัวอักษรต่างกันอย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "อักขระนับอักขระทุกตัวรวมถึงการเว้นวรรคและเครื่องหมายวรรคตอน คำจะเท่ากับตัวอักษรจีนบวกคำตะวันตก ซึ่งใกล้เคียงกับจำนวนคำที่ใช้เขียนเรียงความหรือจ้างเขียน"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "มันตรงกับจำนวนคำ WPS และ Word หรือไม่",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "สำหรับข้อความภาษาจีนล้วนหรือภาษาอังกฤษล้วนมักจะตรงกัน สำหรับข้อความผสม สัญลักษณ์หลายๆ ตัว หรืออักขระเต็มความกว้าง อาจมีความแตกต่างเล็กน้อย เนื่องจากเครื่องมือแต่ละอย่างจะแยกประเภทเครื่องหมายวรรคตอนและการเว้นวรรคแตกต่างกันเล็กน้อย"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "นับคำภาษาอังกฤษได้ไหม?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ใช่. หลังจากลบอักขระ CJK แล้ว การเว้นช่องว่างแต่ละครั้งจะเป็นคำภาษาตะวันตก ซึ่งมีประโยชน์สำหรับการจำกัดคำในเรียงความและบทคัดย่อภาษาอังกฤษ"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "จำนวนไบต์ UTF-8 มีไว้เพื่ออะไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ช่องฐานข้อมูล แบบฟอร์ม และ API มักจะจำกัดความยาวเป็นไบต์ ตัวอักษรละตินใช้เวลา 1 ไบต์ และตัวอักษรจีนมักจะใช้เวลา 3 ดังนั้นการนับไบต์จะช่วยให้คุณหลีกเลี่ยงการถูกตัดทอน"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ภาษา: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <strong>ไทย</strong></nav>
+<h1>ตัวนับคำและตัวแปลงข้อความออนไลน์</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_th.webp"><img src="/img/cover_th.png" alt="ภาพประกอบตัวนับคำและตัวแปลงข้อความออนไลน์" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>รูป: ตัวนับคำออนไลน์และตัวแปลงข้อความ (คำ CJK และภาษาละติน ตัวอักษร ย่อหน้า)</figcaption></figure>
+<p>วางข้อความของคุณลงในช่องด้านล่างเพื่อดูอักขระ ตัวอักษรจีน คำภาษาอังกฤษ บรรทัด ย่อหน้า และไบต์ UTF-8 ที่อัปเดต <strong>เรียลไทม์</strong> และแปลงตัวพิมพ์เล็กและตัวพิมพ์ใหญ่ ช่องว่าง และบรรทัดว่างได้ในคลิกเดียว ทุกอย่างทำงานภายในเบราว์เซอร์ของคุณและ<strong>ไม่มีการอัปโหลด</strong> เหมาะสำหรับการตรวจสอบเรียงความ ประวัติย่อ แบบฟอร์ม โพสต์โซเชียล และเอกสาร WPS</p>
+<textarea id="wc-input" placeholder="วางหรือพิมพ์ข้อความที่นี่ - จำนวนจะอัปเดตเมื่อคุณพิมพ์..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">ตัวละคร (มีช่องว่าง)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">ตัวละคร (ไม่มีช่องว่าง)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">ตัวอักษรจีน</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">คำ (ตัวอักษร CJK + คำภาษาตะวันตก)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">เส้น</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">ย่อหน้า</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 ไบต์</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">เวลาอ่าน</div></div></div>
+<h2>การแปลงข้อความ</h2>
+<div class="ops"><button data-op="upper">ตัวพิมพ์ใหญ่</button><button data-op="lower">ตัวพิมพ์เล็ก</button><button data-op="title">ชื่อเรื่อง กรณี</button><button data-op="sentence">กรณีประโยค</button><button data-op="trim">ตัดช่องว่างบรรทัด</button><button data-op="collapse">ยุบช่องว่าง</button><button data-op="blank">ลบบรรทัดว่าง</button><button data-op="sort">เรียงลำดับบรรทัด</button><button data-op="copy" class="pri">คัดลอกผลลัพธ์</button><button data-op="clear">ชัดเจน</button></div>
+<h2>วิธีคำนวณการนับ</h2>
+<p>ขั้นแรกเครื่องมือจะแยกข้อความออกเป็นบรรทัดและย่อหน้าด้วยตัวแบ่งบรรทัด จากนั้นสแกนอักขระทีละอักขระ: สิ่งใดก็ตามในกราฟแนวความคิดของ CJK, ช่วงคานะหรืออังกูลจะนับเป็นอักขระจีนหนึ่งตัว ในขณะที่การดำเนินการที่คั่นด้วยช่องว่างแต่ละรายการจะนับเป็นคำตะวันตกหนึ่งคำ ซึ่งตรงกับตรรกะ "ตัวอักษรจีนและคำภาษาเกาหลี" บวกกับตรรกะ "คำภาษาอังกฤษ" ในการนับจำนวนคำของ WPS และ Microsoft Word ดังนั้นข้อความที่ผสมกันจึงนับได้อย่างถูกต้องเช่นกัน</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="รูปที่ 1: อินพุต -> สแกนอักขระแต่ละตัว -> จำแนก (ถ่าน CJK / คำตะวันตก) -> ผลรวม" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ป้อนข้อความ</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">สแกนตัวละครแต่ละตั</text><text x="302" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ว</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">จำแนก: ถ่าน CJK / </text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">คำตะวันตก</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ผลรวม</text></svg><figcaption>รูปที่ 1: อินพุต -&gt; สแกนอักขระแต่ละตัว -&gt; จำแนก (ถ่าน CJK / คำตะวันตก) -&gt; ผลรวม</figcaption></figure>
+<h2>สิ่งที่ได้รับการนับ</h2>
+<p>อักขระ (มีช่องว่าง) นับอักขระทุกตัวรวมถึงการเว้นวรรคและเครื่องหมายวรรคตอน อักขระ (ไม่มีช่องว่าง) จะลดช่องว่างทั้งหมด ตัวอักษรจีนนับเฉพาะอักษรภาพและอักษรคะนะ/อังกูล ย่อหน้าจะถูกคั่นด้วยบรรทัดว่าง อักขระที่มองไม่เห็น เช่น CR/LF และแท็บจะส่งผลต่อจำนวนไบต์แต่จะไม่นับเป็นคำตามค่าเริ่มต้น</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_th.webp"><img src="/img/board_th.png" alt="ภาพประกอบตรรกะการนับจำนวนคำ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>รูป: อักขระ CJK และคำภาษาตะวันตกแต่ละคำนับเป็น 1 ดังนั้นข้อความแบบผสมจึงนับได้อย่างถูกต้อง</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="รูปที่ 2: วิธีการนับเนื้อหาแต่ละประเภท" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">ตรรกะการนับ</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">อักขระ CJK = ตัวละ 1 ตัว</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">คำตะวันตก = อันละ 1 อัน</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">ช่องว่าง: นับเป็นอักขระ ไม่ใช่คำ</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">บรรทัดว่าง = ตัวแบ่งย่อหน้า</text></svg><figcaption>รูปที่ 2: วิธีการนับเนื้อหาแต่ละประเภท</figcaption></figure>
+<h2 id="i4data">การประมาณการการอ้างอิงจำนวนคำและเวลาในการอ่าน (2026)</h2>
+<p>ตัวเลขทั่วไปสองสามตัวช่วยให้คุณตัดสินความยาวได้อย่างรวดเร็ว เวลาในการอ่านประมาณโดยหารด้วยความเร็ว โดยค่าเริ่มต้นจะอยู่ที่ประมาณ 200 คำต่อนาที</p>
+<table class="data"><tbody>
+<tr><td>ความเร็วในการอ่านภาษาอังกฤษแบบเงียบ</td><td>≈ 238 words/min</td><td class="note">จากการวิเคราะห์เมตาอัตราการอ่าน (Brysbaert, 2019)</td></tr>
+<tr><td>ความเร็วในการอ่านภาษาจีนเริ่มต้น</td><td>≈ 255 chars/min</td><td class="note">การประมาณการของประชาชนทั่วไป</td></tr>
+<tr><td>กระดาษ A4 หนึ่งหน้า (12 พอยต์ ระยะห่างเดียว)</td><td>≈ 500 words / 800 chars</td><td class="note">การประมาณเรียงพิมพ์ทั่วไป</td></tr>
+<tr><td>จำนวนอักขระสูงสุดในโพสต์โซเชียล (ข้อมูลอ้างอิง)</td><td>280 / 140 characters</td><td class="note">กฎแพลตฟอร์มสาธารณะอาจมีการเปลี่ยนแปลง</td></tr>
+<tr><td>ความยาวการแสดงตัวอย่างข้อมูลการค้นหา</td><td>≈ 155 characters</td><td class="note">หลักทั่วไป (ประมาณ 920 พิกเซล)</td></tr>
+</tbody></table>
+<p class="note">เป็นการประมาณการที่รวบรวมจากแหล่งข้อมูลสาธารณะ ไม่ใช่การวัดผลโดยตรง และมีไว้เพื่อการอ้างอิงเท่านั้น กฎของแพลตฟอร์มอาจมีการเปลี่ยนแปลงเมื่อเวลาผ่านไป</p>
+<h2>คำถามที่พบบ่อย</h2>
+<dl class="faq">
+<dt>ตัวนับคำนี้อัปโหลดข้อความของฉันหรือไม่</dt><dd>ไม่ การนับและการแปลงทั้งหมดทำงานภายในเบราว์เซอร์ของคุณด้วย JavaScript ข้อความของคุณจะไม่ถูกส่งไปยังเซิร์ฟเวอร์ใด ๆ และจะถูกล้างเมื่อคุณปิดหน้า</dd>
+<dt>ตัวอักษรจีนนับอย่างไร?</dt><dd>อักขระแต่ละตัวในอักษรภาพ ส่วนขยาย ช่วงคานะ และอังกูลของ CJK นับเป็นอักขระจีนหนึ่งตัว ซึ่งตรงกับหน่วยวัด "อักขระจีนและคำภาษาเกาหลี" ใน WPS และ Word</dd>
+<dt>คำและตัวอักษรต่างกันอย่างไร?</dt><dd>อักขระนับอักขระทุกตัวรวมถึงการเว้นวรรคและเครื่องหมายวรรคตอน คำจะเท่ากับตัวอักษรจีนบวกคำตะวันตก ซึ่งใกล้เคียงกับจำนวนคำที่ใช้เขียนเรียงความหรือจ้างเขียน</dd>
+<dt>มันตรงกับจำนวนคำ WPS และ Word หรือไม่</dt><dd>สำหรับข้อความภาษาจีนล้วนหรือภาษาอังกฤษล้วนมักจะตรงกัน สำหรับข้อความผสม สัญลักษณ์หลายๆ ตัว หรืออักขระเต็มความกว้าง อาจมีความแตกต่างเล็กน้อย เนื่องจากเครื่องมือแต่ละอย่างจะแยกประเภทเครื่องหมายวรรคตอนและการเว้นวรรคแตกต่างกันเล็กน้อย</dd>
+<dt>นับคำภาษาอังกฤษได้ไหม?</dt><dd>ใช่. หลังจากลบอักขระ CJK แล้ว การเว้นช่องว่างแต่ละครั้งจะเป็นคำภาษาตะวันตก ซึ่งมีประโยชน์สำหรับการจำกัดคำในเรียงความและบทคัดย่อภาษาอังกฤษ</dd>
+<dt>จำนวนไบต์ UTF-8 มีไว้เพื่ออะไร?</dt><dd>ช่องฐานข้อมูล แบบฟอร์ม และ API มักจะจำกัดความยาวเป็นไบต์ ตัวอักษรละตินใช้เวลา 1 ไบต์ และตัวอักษรจีนมักจะใช้เวลา 3 ดังนั้นการนับไบต์จะช่วยให้คุณหลีกเลี่ยงการถูกตัดทอน</dd>
+</dl>
+<h2>เมื่อสิ่งนี้มีประโยชน์</h2>
+<ul class="scenes"><li>ตรวจสอบว่าเรียงความหรือรายงานตรงตามจำนวนคำหรืออักขระที่กำหนดหรือไม่</li><li>ตัดเรซูเม่ให้เหลือเพียงหน้าเดียวโดยดูจำนวนอักขระและจำนวนบรรทัด</li><li>เก็บโพสต์โซเชียลให้ไม่เกินจำนวนอักขระสูงสุดต่อโพสต์ เพื่อไม่ให้ถูกตัดออก</li><li>รักษาชื่อและคำอธิบาย SEO ให้อยู่ในช่วงอักขระที่แสดง</li><li>แปลงตัวพิมพ์และตัวพิมพ์ให้ชื่อเรื่องและส่วนหัวภาษาอังกฤษเป็นระเบียบเรียบร้อยอย่างรวดเร็ว</li></ul>
+<div class="related"><h2>ลิงค์ที่เกี่ยวข้อง</h2>
+<div class="cta">ต้องการจำนวนคำ การจัดวาง และการแก้ไขหลายรูปแบบบนเดสก์ท็อปที่สมบูรณ์ยิ่งขึ้นหรือไม่ ดาวน์โหลด WPS Office: <a href="https://wpsofficepro.com/download/">ดาวน์โหลด WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">เว็บไซต์อย่างเป็นทางการของ WPS</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">คุณสมบัติ WPS</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">คำถามที่พบบ่อย WPS</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">การแบ่งส่วนข้อความ Unicode (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">ตัวช่วยนับจำนวนคำใน Microsoft Word</a></li></ul></div>
+</main>
+<footer>เรียบเรียงโดยอีวาน ลิน การอ้างอิงลอจิกการนับ ความช่วยเหลืออย่างเป็นทางการของ WPS เอกสารประกอบการนับคำของ Microsoft Word และมาตรฐานการแบ่งส่วนข้อความ Unicode (UAX #29) แหล่งข้อมูลสาธารณะทั้งหมดและสำหรับการอ้างอิงเท่านั้น เครื่องมือนี้ทำงานภายในเครื่องโดยสมบูรณ์และไม่มีการอัปโหลดอะไรเลย<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "นาที", "copied": "คัดลอกแล้ว"};</script><script src="/app.js"></script>
+</body></html>
