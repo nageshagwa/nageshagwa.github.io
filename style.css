@@ -1,0 +1,28 @@
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Segoe UI",Arial,"Microsoft YaHei",sans-serif;line-height:1.75;color:#1d1d1f;background:#f4f6fb;margin:0}
+.wrap{max-width:860px;margin:0 auto;padding:26px 18px}
+main{background:#fff;border-radius:16px;padding:24px 26px;box-shadow:0 1px 4px rgba(20,40,90,.06)}
+h1{margin-top:0;font-size:27px;color:#0c1a33}
+h2{font-size:20px;margin-top:32px;border-top:1px solid #eef0f5;padding-top:18px;color:#0c1a33}
+p{margin:.6em 0}
+.lang{font-size:13px;color:#7a8194;margin-bottom:12px;line-height:2}.lang a{color:#1f69e0;text-decoration:none}.lang strong{color:#0c1a33}
+textarea{width:100%;min-height:190px;font-size:16px;padding:13px 14px;border:1px solid #cdd3e0;border-radius:12px;resize:vertical;font-family:inherit;line-height:1.6}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.stat{flex:1 1 150px;border:1px solid #e8ebf2;border-radius:12px;padding:12px 14px;background:#fafbff}
+.stat .n{font-size:23px;font-weight:700;color:#1f69e0}.stat .l{font-size:12.5px;color:#717a8c;margin-top:2px}
+.ops{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.ops button{font-size:14px;padding:9px 14px;border:1px solid #d3d9e6;border-radius:10px;background:#fff;color:#23303f;cursor:pointer}
+.ops button:hover{border-color:#1f69e0;color:#1f69e0}
+.ops button.pri{background:#1f69e0;color:#fff;border-color:#1f69e0}
+figure{margin:18px 0}figure.i4png img{display:block}
+figcaption{color:#7a8194;font-size:12.5px;text-align:center;margin-top:6px}
+table.data{border-collapse:collapse;width:100%;margin-top:12px;font-size:14px}
+table.data th,table.data td{border-bottom:1px solid #eef0f5;padding:9px 8px;text-align:left;vertical-align:top}
+table.data th{color:#0c1a33}
+.faq dt{font-weight:700;margin-top:14px;color:#0c1a33}.faq dd{margin:4px 0 0;color:#33405a}
+ul.scenes li{margin:7px 0}
+.related{margin-top:30px;border-top:2px solid #eef0f5;padding-top:16px}
+.cta{background:#eaf1fe;border:1px solid #cfe0ff;border-radius:12px;padding:14px 16px;margin:12px 0}
+.cta a{font-weight:700;color:#1f69e0}
+.note{color:#8a91a3;font-size:12.5px}
+a{color:#1f69e0}
+footer{color:#8a91a3;font-size:12.5px;margin-top:28px;text-align:center;line-height:1.7}
