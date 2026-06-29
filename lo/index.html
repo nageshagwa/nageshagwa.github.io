@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="lo"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter - ຕົວອັກສອນອອນໄລນ໌, Word &amp; Paragraph Count + Case Converter</title>
+<meta name="description" content="ຕົວນັບຄຳສັບ ແລະຕົວອັກສອນອອນໄລນ໌ຟຣີດ້ວຍການປ່ຽນຂໍ້ຄວາມ: ນັບຕົວອັກສອນຈີນ, ຄຳສັບພາສາອັງກິດ, ຕົວອັກສອນ (ມີ/ບໍ່ມີຍະຫວ່າງ), ແຖວ, ຫຍໍ້ໜ້າ ແລະ UTF-8 bytes ໃນເວລາຈິງ, ບວກກັບກໍລະນີ, ຕົວພິມໃຫຍ່, ການຕັດ ແລະເຄື່ອງມືເສັ້ນຫວ່າງເປົ່າ. ແລ່ນຢູ່ໃນທ້ອງຖິ່ນ, ບໍ່ມີຫຍັງຖືກອັບໂຫລດ - ມີປະໂຫຍດສໍາລັບການກວດສອບເອກະສານ WPS ແລະ Office.">
+<link rel="canonical" href="https://nageshagwa.github.io/lo/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Word Counter - ຕົວອັກສອນອອນໄລນ໌, Word &amp; Paragraph Count + Case Converter">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "ຕົວນັບຄໍາອອນໄລນ໌ & ຕົວແປງຂໍ້ຄວາມ",
+   "url": "https://nageshagwa.github.io/lo/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "lo",
+   "description": "ຕົວນັບຄຳສັບ ແລະຕົວອັກສອນອອນໄລນ໌ຟຣີດ້ວຍການປ່ຽນຂໍ້ຄວາມ: ນັບຕົວອັກສອນຈີນ, ຄຳສັບພາສາອັງກິດ, ຕົວອັກສອນ (ມີ/ບໍ່ມີຍະຫວ່າງ), ແຖວ, ຫຍໍ້ໜ້າ ແລະ UTF-8 bytes ໃນເວລາຈິງ, ບວກກັບກໍລະນີ, ຕົວພິມໃຫຍ່, ການຕັດ ແລະເຄື່ອງມືເສັ້ນຫວ່າງເປົ່າ. ແລ່ນຢູ່ໃນທ້ອງຖິ່ນ, ບໍ່ມີຫຍັງຖືກອັບໂຫລດ - ມີປະໂຫຍດສໍາລັບການກວດສອບເອກະສານ WPS ແລະ Office.",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "lo",
+   "url": "https://nageshagwa.github.io/lo/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ຄໍານີ້ counter ອັບໂຫລດຂໍ້ຄວາມຂອງຂ້ອຍບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ບໍ່. ການນັບແລະການແປງທັງໝົດດໍາເນີນການຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານດ້ວຍ JavaScript; ຂໍ້ຄວາມຂອງເຈົ້າບໍ່ເຄີຍຖືກສົ່ງໄປຫາເຊີບເວີໃດໆ ແລະຖືກລຶບລ້າງເມື່ອທ່ານປິດໜ້ານັ້ນ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ຕົວອັກສອນຈີນນັບເປັນແນວໃດ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ແຕ່ລະຕົວລະຄອນໃນ CJK ideograph, extension, kana ແລະ Hangul ranges ນັບເປັນຕົວໜັງສືຈີນໂຕດຽວ, ກົງກັບມາດຕະການ \"ຕົວອັກສອນຈີນ ແລະພາສາເກົາຫຼີ\" ໃນ WPS ແລະ Word."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ຄວາມແຕກຕ່າງລະຫວ່າງຄໍາສັບແລະຕົວອັກສອນແມ່ນຫຍັງ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ຕົວອັກສອນນັບທຸກຕົວອັກສອນລວມທັງຍະຫວ່າງ ແລະເຄື່ອງໝາຍວັກຕອນ; ຄໍາສັບຕ່າງໆເທົ່າກັບຕົວອັກສອນຈີນບວກກັບຄໍາສັບຕາເວັນຕົກ, ໃກ້ຊິດກັບຄໍາທີ່ໃຊ້ສໍາລັບການຂຽນບົດເລື່ອງຫຼືການຂຽນທີ່ຈ່າຍ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ມັນກົງກັບ WPS ແລະຄໍານັບຄໍາ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ສໍາລັບຂໍ້ຄວາມພາສາຈີນບໍລິສຸດຫຼືພາສາອັງກິດບໍລິສຸດມັນມັກຈະກົງກັນ; ດ້ວຍຂໍ້ຄວາມປະສົມ, ສັນຍາລັກຫຼາຍອັນ ຫຼືຕົວອັກສອນເຕັມຄວາມກວ້າງອາດມີຄວາມແຕກຕ່າງເລັກນ້ອຍ, ເພາະວ່າແຕ່ລະເຄື່ອງມືຈັດແບ່ງເຄື່ອງໝາຍວັກຕອນ ແລະຍະຫວ່າງແຕກຕ່າງກັນເລັກນ້ອຍ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ມັນສາມາດນັບຄໍາພາສາອັງກິດໄດ້ບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ແມ່ນແລ້ວ. ຫຼັງຈາກຖອດຕົວອັກສອນ CJK ອອກແລ້ວ, ແຕ່ລະໄລຍະທີ່ກຳນົດຊ່ອງຫວ່າງແມ່ນເປັນຄຳສັບຕາເວັນຕົກ, ເຊິ່ງມີປະໂຫຍດຕໍ່ການຈຳກັດຄຳສັບໃນບົດຂຽນພາສາອັງກິດ ແລະ ບົດຄັດຫຍໍ້."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ການນັບ UTF-8 byte ແມ່ນຫຍັງ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ຊ່ອງຂໍ້ມູນ, ແບບຟອມ ແລະ APIs ມັກຈະຈໍາກັດຄວາມຍາວໂດຍ bytes. ຕົວອັກສອນລາຕິນໃຊ້ເວລາ 1 ໄບຕ໌ ແລະຕົວອັກສອນຈີນມັກຈະໃຊ້ 3, ດັ່ງນັ້ນການນັບໄບທ໌ຊ່ວຍໃຫ້ທ່ານຫຼີກເວັ້ນການຖືກຕັດອອກ."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ພາສາ: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <strong>ພາສາລາວ</strong> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>ຕົວນັບຄໍາອອນໄລນ໌ &amp; ຕົວແປງຂໍ້ຄວາມ</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_lo.webp"><img src="/img/cover_lo.png" alt="ຕົວນັບຄໍາອອນໄລນ໌ແລະຕົວປ່ຽນຂໍ້ຄວາມ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Fig​: ຕົວ​ນັບ​ຄໍາ​ອອນ​ໄລ​ນ​໌​ແລະ​ຕົວ​ປ່ຽນ​ຂໍ້​ຄວາມ (CJK &amp; ຄໍາ​ລາ​ຕິນ​, ລັກ​ສະ​ນະ​, ວັກ​)</figcaption></figure>
+<p>ວາງຂໍ້ຄວາມຂອງທ່ານໃສ່ໃນປ່ອງລຸ່ມນີ້ເພື່ອເບິ່ງຕົວອັກສອນ, ຕົວອັກສອນຈີນ, ຄໍາສັບພາສາອັງກິດ, ແຖວ, ວັກ ແລະ UTF-8 bytes ອັບເດດໃນ <strong>ເວລາຈິງ</strong>, ແລະປ່ຽນກໍລະນີ, ຕົວພິມໃຫຍ່, ຍະຫວ່າງ ແລະເສັ້ນເປົ່າດ້ວຍການຄລິກດຽວ. ທຸກສິ່ງທຸກຢ່າງເຮັດວຽກຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານແລະ <strong>ບໍ່ມີຫຍັງຖືກອັບໂຫລດ</strong> - ເຫມາະສໍາລັບການກວດສອບ essays, resumes, forms, social posts ແລະ WPS document.</p>
+<textarea id="wc-input" placeholder="ວາງ ຫຼື ພິມຂໍ້ຄວາມໃສ່ບ່ອນນີ້ - ຕົວເລກອັບເດດເມື່ອທ່ານພິມ..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">ຕົວອັກສອນ (ມີຍະຫວ່າງ)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">ຕົວອັກສອນ (ບໍ່ມີຍະຫວ່າງ)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">ຕົວອັກສອນຈີນ</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">ຄຳສັບ (ຕົວອັກສອນ CJK + ຄຳສັບຕາເວັນຕົກ)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">ສາຍ</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">ວັກ</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 ໄບຕ໌</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">ເວລາອ່ານ</div></div></div>
+<h2>ການແປງຂໍ້ຄວາມ</h2>
+<div class="ops"><button data-op="upper">ສູງສຸດ</button><button data-op="lower">ຕົວພິມນ້ອຍ</button><button data-op="title">ກໍລະນີຫົວຂໍ້</button><button data-op="sentence">ກໍລະນີຂອງປະໂຫຍກ</button><button data-op="trim">ຕັດຊ່ອງຫວ່າງແຖວ</button><button data-op="collapse">ຫຍໍ້ຊ່ອງຫວ່າງ</button><button data-op="blank">ເອົາເສັ້ນເປົ່າອອກ</button><button data-op="sort">ຮຽງແຖວ</button><button data-op="copy" class="pri">ສຳເນົາຜົນໄດ້ຮັບ</button><button data-op="clear">ຈະແຈ້ງ</button></div>
+<h2>ວິທີການນັບຖືກຄິດໄລ່</h2>
+<p>ເຄື່ອງມືທໍາອິດແບ່ງຂໍ້ຄວາມອອກເປັນແຖວແລະຫຍໍ້ຫນ້າໂດຍການແບ່ງແຖວ, ຫຼັງຈາກນັ້ນສະແກນຕົວລະຄອນໂດຍລັກສະນະ: ສິ່ງໃດແດ່ທີ່ຢູ່ໃນ ideograph CJK, kana ຫຼື Hangul ນັບເປັນຕົວອັກສອນຈີນຫນຶ່ງ, ໃນຂະນະທີ່ແຕ່ລະໄລຍະທີ່ກໍານົດຊ່ອງຫວ່າງຢູ່ບ່ອນອື່ນນັບເປັນຄໍາຕາເວັນຕົກຫນຶ່ງ. ນີ້ກົງກັບ "ຕົວອັກສອນຈີນແລະຄໍາສັບພາສາເກົາຫຼີ" ບວກກັບ "ຄໍາພາສາອັງກິດ" logic ໃນ WPS ແລະ Microsoft Word ການນັບຄໍາ, ດັ່ງນັ້ນຂໍ້ຄວາມປະສົມຈະນັບຢ່າງຖືກຕ້ອງຄືກັນ.</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 1: ການປ້ອນຂໍ້ມູນ -> ສະແກນແຕ່ລະຕົວອັກສອນ -> ຈັດປະເພດ (CJK char / Western word) -> ຈໍານວນທັງຫມົດ" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ປ້ອນຂໍ້ຄວາມ</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ສະແກນແຕ່ລະຕົວອັກສອ</text><text x="302" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ນ</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ຈັດປະເພດ: CJK char</text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33"> / ຄໍາຕາເວັນຕົກ</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ຈໍານວນທັງຫມົດ</text></svg><figcaption>Fig 1: ການປ້ອນຂໍ້ມູນ -&gt; ສະແກນແຕ່ລະຕົວອັກສອນ -&gt; ຈັດປະເພດ (CJK char / Western word) -&gt; ຈໍານວນທັງຫມົດ</figcaption></figure>
+<h2>ສິ່ງທີ່ໄດ້ຮັບການນັບ</h2>
+<p>ຕົວອັກສອນ (ມີຍະຫວ່າງ) ນັບທຸກຕົວອັກສອນລວມທັງຍະຫວ່າງ ແລະເຄື່ອງໝາຍວັກຕອນ; ຕົວອັກສອນ (ບໍ່ມີຊ່ອງຫວ່າງ) ຫຼຸດລົງຊ່ອງຫວ່າງທັງໝົດ; ຕົວ​ອັກ​ສອນ​ຈີນ​ນັບ​ພຽງ​ແຕ່ ideographs ແລະ kana/Hangul​; ຫຍໍ້ໜ້າຖືກແຍກອອກດ້ວຍແຖວຫວ່າງເປົ່າ. ຕົວ​ອັກ​ສອນ​ທີ່​ເບິ່ງ​ບໍ່​ເຫັນ​ໄດ້​ເຊັ່ນ CR/LF ແລະ​ແຖບ​ມີ​ຜົນ​ກະ​ທົບ​ການ​ນັບ​ໄບ​ຕ​໌​ແຕ່​ບໍ່​ໄດ້​ຖືກ​ນັບ​ເປັນ​ຄໍາ​ຕາມ​ຄ່າ​ເລີ່ມ​ຕົ້ນ​.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_lo.webp"><img src="/img/board_lo.png" alt="ຮູບຕົວຢ່າງເຫດຜົນນັບຄຳ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Fig: a CJK char ແລະຄໍາຕາເວັນຕົກແຕ່ລະອັນນັບເປັນ 1, ສະນັ້ນຂໍ້ຄວາມປະສົມນັບຢ່າງຖືກຕ້ອງ</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 2: ວິທີການນັບແຕ່ລະປະເພດຂອງເນື້ອຫາ" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">ເຫດຜົນການນັບ</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">ຕົວອັກສອນ CJK = 1 ໂຕ</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">ຄໍາຕາເວັນຕົກ = 1 ແຕ່ລະ</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">Space: ນັບເປັນຕົວອັກສອນ, ບໍ່ແມ່ນຄໍາສັບ</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">ເສັ້ນຫວ່າງ = ຫຍໍ້ໜ້າ</text></svg><figcaption>Fig 2: ວິທີການນັບແຕ່ລະປະເພດຂອງເນື້ອຫາ</figcaption></figure>
+<h2 id="i4data">ການ​ຄາດ​ຄະ​ເນ​ການ​ນັບ​ຄໍາ​ແລະ​ເວ​ລາ​ການ​ອ່ານ (2026​)</h2>
+<p>ຕົວເລກທົ່ວໄປຈໍານວນຫນ້ອຍຊ່ວຍໃຫ້ທ່ານຕັດສິນຄວາມຍາວໄດ້ທັນທີ. ເວລາອ່ານແມ່ນຄາດຄະເນເປັນຄໍາທີ່ແບ່ງອອກໂດຍຄວາມໄວ, ເລີ່ມຕົ້ນປະມານ 200 ຄໍາຕໍ່ນາທີ.</p>
+<table class="data"><tbody>
+<tr><td>ຄວາມໄວການອ່ານແບບງຽບຂອງພາສາອັງກິດ</td><td>≈ 238 words/min</td><td class="note">ຈາກການວິເຄາະ meta-rate ການອ່ານ (Brysbaert, 2019)</td></tr>
+<tr><td>ຄວາມໄວການອ່ານພາສາຈີນເລີ່ມຕົ້ນ</td><td>≈ 255 chars/min</td><td class="note">ການຄາດຄະເນສາທາລະນະທົ່ວໄປ</td></tr>
+<tr><td>ຫນ້າ A4 ຫນຶ່ງ (12pt, ໄລຍະຫ່າງດຽວ)</td><td>≈ 500 words / 800 chars</td><td class="note">ການ​ຄາດ​ຄະ​ເນ​ການ​ປະ​ເພດ​ປົກ​ກະ​ຕິ​</td></tr>
+<tr><td>ຂີດຈຳກັດຕົວອັກສອນທາງສັງຄົມ (ອ້າງອີງ)</td><td>280 / 140 characters</td><td class="note">ກົດລະບຽບເວທີສາທາລະນະ, ອາດຈະມີການປ່ຽນແປງ</td></tr>
+<tr><td>ຄວາມຍາວສະແດງຕົວຢ່າງຂອງການຄົ້ນຫາ</td><td>≈ 155 characters</td><td class="note">ກົດຂອງໂປ້ມື (ປະມານ 920 pixels)</td></tr>
+</tbody></table>
+<p class="note">ເຫຼົ່ານີ້ແມ່ນການຄາດຄະເນທີ່ລວບລວມຈາກແຫຼ່ງສາທາລະນະ, ບໍ່ແມ່ນການວັດແທກດ້ວຍມືທໍາອິດ, ແລະແມ່ນເພື່ອອ້າງອີງເທົ່ານັ້ນ; ກົດລະບຽບເວທີອາດຈະມີການປ່ຽນແປງໃນໄລຍະເວລາ.</p>
+<h2>ຄຳຖາມທີ່ມັກຖາມເລື້ອຍໆ</h2>
+<dl class="faq">
+<dt>ຄໍານີ້ counter ອັບໂຫລດຂໍ້ຄວາມຂອງຂ້ອຍບໍ?</dt><dd>ບໍ່. ການນັບແລະການແປງທັງໝົດດໍາເນີນການຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານດ້ວຍ JavaScript; ຂໍ້ຄວາມຂອງເຈົ້າບໍ່ເຄີຍຖືກສົ່ງໄປຫາເຊີບເວີໃດໆ ແລະຖືກລຶບລ້າງເມື່ອທ່ານປິດໜ້ານັ້ນ.</dd>
+<dt>ຕົວອັກສອນຈີນນັບເປັນແນວໃດ?</dt><dd>ແຕ່ລະຕົວລະຄອນໃນ CJK ideograph, extension, kana ແລະ Hangul ranges ນັບເປັນຕົວໜັງສືຈີນໂຕດຽວ, ກົງກັບມາດຕະການ "ຕົວອັກສອນຈີນ ແລະພາສາເກົາຫຼີ" ໃນ WPS ແລະ Word.</dd>
+<dt>ຄວາມແຕກຕ່າງລະຫວ່າງຄໍາສັບແລະຕົວອັກສອນແມ່ນຫຍັງ?</dt><dd>ຕົວອັກສອນນັບທຸກຕົວອັກສອນລວມທັງຍະຫວ່າງ ແລະເຄື່ອງໝາຍວັກຕອນ; ຄໍາສັບຕ່າງໆເທົ່າກັບຕົວອັກສອນຈີນບວກກັບຄໍາສັບຕາເວັນຕົກ, ໃກ້ຊິດກັບຄໍາທີ່ໃຊ້ສໍາລັບການຂຽນບົດເລື່ອງຫຼືການຂຽນທີ່ຈ່າຍ.</dd>
+<dt>ມັນກົງກັບ WPS ແລະຄໍານັບຄໍາ?</dt><dd>ສໍາລັບຂໍ້ຄວາມພາສາຈີນບໍລິສຸດຫຼືພາສາອັງກິດບໍລິສຸດມັນມັກຈະກົງກັນ; ດ້ວຍຂໍ້ຄວາມປະສົມ, ສັນຍາລັກຫຼາຍອັນ ຫຼືຕົວອັກສອນເຕັມຄວາມກວ້າງອາດມີຄວາມແຕກຕ່າງເລັກນ້ອຍ, ເພາະວ່າແຕ່ລະເຄື່ອງມືຈັດແບ່ງເຄື່ອງໝາຍວັກຕອນ ແລະຍະຫວ່າງແຕກຕ່າງກັນເລັກນ້ອຍ.</dd>
+<dt>ມັນສາມາດນັບຄໍາພາສາອັງກິດໄດ້ບໍ?</dt><dd>ແມ່ນແລ້ວ. ຫຼັງຈາກຖອດຕົວອັກສອນ CJK ອອກແລ້ວ, ແຕ່ລະໄລຍະທີ່ກຳນົດຊ່ອງຫວ່າງແມ່ນເປັນຄຳສັບຕາເວັນຕົກ, ເຊິ່ງມີປະໂຫຍດຕໍ່ການຈຳກັດຄຳສັບໃນບົດຂຽນພາສາອັງກິດ ແລະ ບົດຄັດຫຍໍ້.</dd>
+<dt>ການນັບ UTF-8 byte ແມ່ນຫຍັງ?</dt><dd>ຊ່ອງຂໍ້ມູນ, ແບບຟອມ ແລະ APIs ມັກຈະຈໍາກັດຄວາມຍາວໂດຍ bytes. ຕົວອັກສອນລາຕິນໃຊ້ເວລາ 1 ໄບຕ໌ ແລະຕົວອັກສອນຈີນມັກຈະໃຊ້ 3, ດັ່ງນັ້ນການນັບໄບທ໌ຊ່ວຍໃຫ້ທ່ານຫຼີກເວັ້ນການຖືກຕັດອອກ.</dd>
+</dl>
+<h2>ໃນເວລາທີ່ນີ້ແມ່ນເປັນປະໂຫຍດ</h2>
+<ul class="scenes"><li>ກວດເບິ່ງວ່າ essay ຫຼືບົດລາຍງານກົງກັບຄໍາທີ່ກໍານົດໄວ້ຫຼືຕົວອັກສອນທີ່ກໍານົດໄວ້.</li><li>ຕັດຊີວະປະຫວັດເປັນໜ້າໜຶ່ງໂດຍການເບິ່ງຕົວລະຄອນ ແລະຈຳນວນແຖວ.</li><li>ຮັກສາຂໍ້ຄວາມທາງສັງຄົມພາຍໃຕ້ຂອບເຂດຈໍາກັດຕົວອັກສອນຕໍ່ຫນ້າເພື່ອບໍ່ໃຫ້ພວກມັນຖືກຕັດອອກ.</li><li>ຮັກສາຫົວຂໍ້ SEO ແລະຄໍາອະທິບາຍພາຍໃນຂອບເຂດລັກສະນະທີ່ສະແດງ.</li><li>ແປງຕົວພິມໃຫຍ່ ແລະຕົວພິມໃຫຍ່ໃຫ້ເປັນຫົວຂໍ້ ແລະສ່ວນຫົວພາສາອັງກິດທີ່ກະທັດຮັດ.</li></ul>
+<div class="related"><h2>ການເຊື່ອມຕໍ່ທີ່ກ່ຽວຂ້ອງ</h2>
+<div class="cta">ຕ້ອງ​ການ​ນັບ​ຄໍາ​ທີ່​ເຕັມ​ທີ່​, layout ແລະ​ການ​ແກ້​ໄຂ​ຫຼາຍ​ຮູບ​ແບບ​ໃນ desktop​? ດາວໂຫລດ WPS Office: <a href="https://wpsofficepro.com/download/">ດາວໂຫລດ WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">ເວັບໄຊທ໌ທາງການ WPS</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">ຄຸນສົມບັດ WPS</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS FAQ</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">ການແບ່ງສ່ວນຂໍ້ຄວາມ Unicode (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">ການຊ່ວຍເຫຼືອການນັບຄໍາຂອງ Microsoft Word</a></li></ul></div>
+</main>
+<footer>ແກ້ໄຂໂດຍ Evan Lin. ການນັບການອ້າງອິງຕາມເຫດຜົນ WPS ການຊ່ວຍເຫຼືອຢ່າງເປັນທາງການ, ເອກະສານການນັບຄໍາຂອງ Microsoft Word ແລະມາດຕະຖານ Unicode Text Segmentation (UAX #29), ແຫຼ່ງສາທາລະນະທັງໝົດ ແລະສໍາລັບການອ້າງອີງເທົ່ານັ້ນ. ເຄື່ອງ​ມື​ນີ້​ດໍາ​ເນີນ​ການ​ທັງ​ຫມົດ​ໃນ​ທ້ອງ​ຖິ່ນ​ແລະ​ບໍ່​ໄດ້​ອັບ​ໂຫຼດ​ຫຍັງ​.<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "ນາທີ", "copied": "ສຳເນົາແລ້ວ"};</script><script src="/app.js"></script>
+</body></html>
