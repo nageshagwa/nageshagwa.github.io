@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter - Online Character, Word &amp; Paragraph Count + Case Converter</title>
+<meta name="description" content="Free online word and character counter with text conversion: count Chinese characters, English words, characters (with/without spaces), lines, paragraphs and UTF-8 bytes in real time, plus case, capitalization, trim and blank-line tools. Runs locally, nothing is uploaded - handy for checking WPS and Office documents.">
+<link rel="canonical" href="https://nageshagwa.github.io/en/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Word Counter - Online Character, Word &amp; Paragraph Count + Case Converter">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Online Word Counter & Text Converter",
+   "url": "https://nageshagwa.github.io/en/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "en",
+   "description": "Free online word and character counter with text conversion: count Chinese characters, English words, characters (with/without spaces), lines, paragraphs and UTF-8 bytes in real time, plus case, capitalization, trim and blank-line tools. Runs locally, nothing is uploaded - handy for checking WPS and Office documents.",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "url": "https://nageshagwa.github.io/en/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Does this word counter upload my text?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. All counting and conversion run locally in your browser with JavaScript; your text is never sent to any server and is cleared when you close the page."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How are Chinese characters counted?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Each character in the CJK ideograph, extension, kana and Hangul ranges counts as one Chinese character, matching the \"Chinese characters and Korean words\" measure in WPS and Word."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between words and characters?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Characters counts every character including spaces and punctuation; words equals Chinese characters plus Western words, closer to the word count used for essays or paid writing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it match WPS and Word word count?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For pure Chinese or pure English text it usually matches; with mixed text, many symbols or full-width characters there may be a small difference, because each tool classifies punctuation and spaces slightly differently."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can it count English words?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. After removing CJK characters, each whitespace-delimited run is a Western word, which is handy for word limits on English essays and abstracts."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the UTF-8 byte count for?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Database fields, forms and APIs often limit length by bytes. A Latin letter takes 1 byte and a Chinese character usually takes 3, so the byte count helps you avoid being truncated."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Language: <a href="/">简体中文</a> · <strong>English</strong> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>Online Word Counter &amp; Text Converter</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_en.webp"><img src="/img/cover_en.png" alt="Online word counter and text converter illustration" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Fig: online word counter and text converter (CJK &amp; Latin words, characters, paragraphs)</figcaption></figure>
+<p>Paste your text into the box below to see characters, Chinese characters, English words, lines, paragraphs and UTF-8 bytes update in <strong>real time</strong>, and convert case, capitalization, whitespace and blank lines with one click. Everything runs locally in your browser and <strong>nothing is uploaded</strong> - ideal for checking essays, resumes, forms, social posts and WPS documents.</p>
+<textarea id="wc-input" placeholder="Paste or type text here - the counts update as you type..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">Characters (with spaces)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">Characters (no spaces)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">Chinese characters</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">Words (CJK chars + Western words)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">Lines</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">Paragraphs</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 bytes</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">Reading time</div></div></div>
+<h2>Text conversion</h2>
+<div class="ops"><button data-op="upper">UPPERCASE</button><button data-op="lower">lowercase</button><button data-op="title">Title Case</button><button data-op="sentence">Sentence case</button><button data-op="trim">Trim line spaces</button><button data-op="collapse">Collapse spaces</button><button data-op="blank">Remove blank lines</button><button data-op="sort">Sort lines</button><button data-op="copy" class="pri">Copy result</button><button data-op="clear">Clear</button></div>
+<h2>How the counts are calculated</h2>
+<p>The tool first splits text into lines and paragraphs by line breaks, then scans character by character: anything in the CJK ideograph, kana or Hangul ranges counts as one Chinese character, while each whitespace-delimited run elsewhere counts as one Western word. This matches the "Chinese characters and Korean words" plus "English words" logic in WPS and Microsoft Word word count, so mixed text counts correctly too.</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 1: input -> scan each character -> classify (CJK char / Western word) -> totals" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Input text</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Scan each characte</text><text x="302" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">r</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Classify: CJK char</text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33"> / Western word</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Totals</text></svg><figcaption>Fig 1: input -&gt; scan each character -&gt; classify (CJK char / Western word) -&gt; totals</figcaption></figure>
+<h2>What gets counted</h2>
+<p>Characters (with spaces) counts every character including spaces and punctuation; characters (no spaces) drops all whitespace; Chinese characters counts only ideographs and kana/Hangul; paragraphs are separated by blank lines. Invisible characters such as CR/LF and tabs affect the byte count but are not counted as words by default.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_en.webp"><img src="/img/board_en.png" alt="Word-count logic illustration" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Fig: a CJK char and a Western word each count as 1, so mixed text counts correctly</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 2: how each kind of content is counted" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">Counting logic</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">CJK character = 1 each</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">Western word = 1 each</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">Space: counts as a character, not a word</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">Blank line = paragraph break</text></svg><figcaption>Fig 2: how each kind of content is counted</figcaption></figure>
+<h2 id="i4data">Word-count &amp; reading-time reference estimates (2026)</h2>
+<p>A few common figures help you judge length at a glance. Reading time is estimated as words divided by speed, defaulting to about 200 words per minute.</p>
+<table class="data"><tbody>
+<tr><td>English silent reading speed</td><td>≈ 238 words/min</td><td class="note">from a reading-rate meta-analysis (Brysbaert, 2019)</td></tr>
+<tr><td>Default Chinese reading speed</td><td>≈ 255 chars/min</td><td class="note">common public estimate</td></tr>
+<tr><td>One A4 page (12pt, single spacing)</td><td>≈ 500 words / 800 chars</td><td class="note">typical typesetting estimate</td></tr>
+<tr><td>Social post character limit (reference)</td><td>280 / 140 characters</td><td class="note">public platform rule, may change</td></tr>
+<tr><td>Search snippet display length</td><td>≈ 155 characters</td><td class="note">rule of thumb (about 920 pixels)</td></tr>
+</tbody></table>
+<p class="note">These are estimates compiled from public sources, not first-hand measurements, and are for reference only; platform rules may change over time.</p>
+<h2>Frequently asked questions</h2>
+<dl class="faq">
+<dt>Does this word counter upload my text?</dt><dd>No. All counting and conversion run locally in your browser with JavaScript; your text is never sent to any server and is cleared when you close the page.</dd>
+<dt>How are Chinese characters counted?</dt><dd>Each character in the CJK ideograph, extension, kana and Hangul ranges counts as one Chinese character, matching the "Chinese characters and Korean words" measure in WPS and Word.</dd>
+<dt>What is the difference between words and characters?</dt><dd>Characters counts every character including spaces and punctuation; words equals Chinese characters plus Western words, closer to the word count used for essays or paid writing.</dd>
+<dt>Does it match WPS and Word word count?</dt><dd>For pure Chinese or pure English text it usually matches; with mixed text, many symbols or full-width characters there may be a small difference, because each tool classifies punctuation and spaces slightly differently.</dd>
+<dt>Can it count English words?</dt><dd>Yes. After removing CJK characters, each whitespace-delimited run is a Western word, which is handy for word limits on English essays and abstracts.</dd>
+<dt>What is the UTF-8 byte count for?</dt><dd>Database fields, forms and APIs often limit length by bytes. A Latin letter takes 1 byte and a Chinese character usually takes 3, so the byte count helps you avoid being truncated.</dd>
+</dl>
+<h2>When this is useful</h2>
+<ul class="scenes"><li>Check whether an essay or report meets a required word or character limit.</li><li>Trim a resume to one page by watching the character and line counts.</li><li>Keep social posts under the per-post character limit so they are not cut off.</li><li>Keep SEO titles and descriptions within the displayed character range.</li><li>Convert case and capitalization to quickly tidy English titles and headers.</li></ul>
+<div class="related"><h2>Related links</h2>
+<div class="cta">Need fuller word count, layout and multi-format editing on the desktop? Download WPS Office: <a href="https://wpsofficepro.com/download/">Download WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">WPS official site</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">WPS features</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS FAQ</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">Unicode Text Segmentation (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Microsoft Word word count help</a></li></ul></div>
+</main>
+<footer>Edited by Evan Lin. Counting logic references WPS official help, the Microsoft Word word count documentation and the Unicode Text Segmentation standard (UAX #29), all public sources and for reference only. This tool runs entirely locally and uploads nothing.<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "min", "copied": "Copied"};</script><script src="/app.js"></script>
+</body></html>
