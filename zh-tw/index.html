@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>字數統計工具 - 線上統計中英文字數/字元/段落 + 大小寫換行轉換</title>
+<meta name="description" content="免費線上字數統計與文字轉換：實時統計中文字數、英文單詞、字元（計/不計空格）、行數、段落、UTF-8 位元組，並支援大小寫、首字母、整行去空白與去空行等轉換。純本地執行、不上傳，給 WPS 等辦公文件做字數核對。">
+<link rel="canonical" href="https://nageshagwa.github.io/zh-tw/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="字數統計工具 - 線上統計中英文字數/字元/段落 + 大小寫換行轉換">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "線上字數統計與文字轉換",
+   "url": "https://nageshagwa.github.io/zh-tw/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "zh-Hant",
+   "description": "免費線上字數統計與文字轉換：實時統計中文字數、英文單詞、字元（計/不計空格）、行數、段落、UTF-8 位元組，並支援大小寫、首字母、整行去空白與去空行等轉換。純本地執行、不上傳，給 WPS 等辦公文件做字數核對。",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hant",
+   "url": "https://nageshagwa.github.io/zh-tw/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "這個字數統計工具會上傳我的文字嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不會。所有統計與轉換都在你瀏覽器裡用 JavaScript 本地完成，文字不會傳送到任何伺服器，關閉頁面即清除。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "中文字數是怎麼算的？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "落在中日韓統一表意文字、擴充套件區、假名與諺文區段的每個字元各計為 1 個「中文字元」，與 WPS / Word 的「中文字元和朝鮮語單詞」口徑一致。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "「字數」和「字元數」有什麼區別？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "字元數數的是每一個字元（含空格、標點）；字數 = 中文字元數 + 西文單詞數，更接近論文或稿費裡說的「字數」。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "和 WPS、Word 的字數統計結果一樣嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "對純中文或純英文文字通常一致；中英混排、含大量符號或全形字元時可能有個位數差異，因為各家對標點與空白的歸類略有不同。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "能統計英文單詞數嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以。去掉中文字元後，按空白切分出的連續片段即為西文單詞，適合英文論文與摘要的詞數限制核對。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UTF-8 位元組數有什麼用？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "資料庫欄位、表單與介面常按位元組限長。一個英文字母佔 1 位元組，一箇中文字元通常佔 3 位元組，位元組數能幫你避免超限被截斷。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">語言： <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <strong>繁體中文</strong> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>線上字數統計與文字轉換工具</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_tw.webp"><img src="/img/cover_tw.png" alt="線上字數統計與文字轉換工具示意圖" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>圖：線上字數統計與文字轉換（中英文字數 · 字元 · 段落）</figcaption></figure>
+<p>把文字粘進下面的輸入框，即可<strong>實時</strong>看到字元數、中文字數、英文單詞、行數、段落與 UTF-8 位元組，並一鍵做大小寫、首字母大寫、去空白、去空行等轉換。全部在你的瀏覽器本地完成，<strong>不上傳伺服器</strong>，適合給論文、簡歷、表單、社媒文案與 WPS 文件做字數核對。</p>
+<textarea id="wc-input" placeholder="在此貼上或輸入文字，統計結果實時更新…" autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">字元數（計空格）</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">字元數（不計空格）</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">中文字元</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">字數（中文字+西文詞）</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">行數</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">段落</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 位元組</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">預計閱讀</div></div></div>
+<h2>文字轉換</h2>
+<div class="ops"><button data-op="upper">全大寫</button><button data-op="lower">全小寫</button><button data-op="title">每詞首字母大寫</button><button data-op="sentence">句首大寫</button><button data-op="trim">去行首尾空白</button><button data-op="collapse">合併多餘空格</button><button data-op="blank">刪除空行</button><button data-op="sort">按行排序</button><button data-op="copy" class="pri">複製結果</button><button data-op="clear">清空</button></div>
+<h2>計數是怎麼算出來的</h2>
+<p>工具先按換行把文字切成行與段落，再逐個字元掃描：落在中日韓統一表意文字、假名、諺文等區段的字元按「中文字元」單獨計 1；其餘按空白切分出的連續片段算 1 個西文單詞。這與 WPS、Microsoft Word「字數統計」裡「中文字元和朝鮮語單詞」+「英文單詞」的口徑一致，因此中英混排也能數準。</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="圖1：輸入 → 逐字元掃描 → 分類（中文字 / 西文詞）→ 彙總統計" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">輸入文字</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">逐字元掃描</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">分類：中文字 / 西文詞</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">彙總統計</text></svg><figcaption>圖1：輸入 → 逐字元掃描 → 分類（中文字 / 西文詞）→ 彙總統計</figcaption></figure>
+<h2>什麼會被算進去</h2>
+<p>字元數（計空格）數所有字元，包括空格與標點；字元數（不計空格）去掉所有空白；中文字元只數表意文字與假名/諺文；段落按空行分隔。換行符 CR/LF、製表符等不可見字元也會影響位元組數，但預設不計入「字數」。</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_tw.webp"><img src="/img/board_tw.png" alt="字數統計計數口徑示意圖" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>圖：中文字與西文詞各計 1，中英混排也數得準</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="圖2：各類內容如何被計入字數統計" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">計數口徑</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">中文字元 = 各計 1</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">西文單詞 = 各計 1</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">空格：計入字元數、不計字數</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">空行 = 段落分隔</text></svg><figcaption>圖2：各類內容如何被計入字數統計</figcaption></figure>
+<h2 id="i4data">字數與閱讀時長參考估算（2026）</h2>
+<p>下面幾個常用口徑可幫你快速判斷篇幅。閱讀時長按「字數 ÷ 速度」估算，工具預設用每分鐘約 200 詞。</p>
+<table class="data"><tbody>
+<tr><td>英文靜默閱讀速度</td><td>≈ 238 词/分钟</td><td class="note">源自閱讀速率薈萃研究（Brysbaert, 2019）</td></tr>
+<tr><td>中文預設閱讀速度</td><td>≈ 255 字/分钟</td><td class="note">公開估算口徑</td></tr>
+<tr><td>一頁 A4（12pt 單倍行距）</td><td>≈ 500 词 / 800 字</td><td class="note">常見排版估算</td></tr>
+<tr><td>社媒單條字元上限（參考）</td><td>280 / 140 字符</td><td class="note">平臺公開規則、可能變動</td></tr>
+<tr><td>搜尋結果摘要顯示長度</td><td>≈ 155 字符</td><td class="note">經驗估算（約 920 畫素）</td></tr>
+</tbody></table>
+<p class="note">以上為公開資料綜合估算、非一手實測，僅供參考；平臺規則可能隨時間變動。</p>
+<h2>常見問題</h2>
+<dl class="faq">
+<dt>這個字數統計工具會上傳我的文字嗎？</dt><dd>不會。所有統計與轉換都在你瀏覽器裡用 JavaScript 本地完成，文字不會傳送到任何伺服器，關閉頁面即清除。</dd>
+<dt>中文字數是怎麼算的？</dt><dd>落在中日韓統一表意文字、擴充套件區、假名與諺文區段的每個字元各計為 1 個「中文字元」，與 WPS / Word 的「中文字元和朝鮮語單詞」口徑一致。</dd>
+<dt>「字數」和「字元數」有什麼區別？</dt><dd>字元數數的是每一個字元（含空格、標點）；字數 = 中文字元數 + 西文單詞數，更接近論文或稿費裡說的「字數」。</dd>
+<dt>和 WPS、Word 的字數統計結果一樣嗎？</dt><dd>對純中文或純英文文字通常一致；中英混排、含大量符號或全形字元時可能有個位數差異，因為各家對標點與空白的歸類略有不同。</dd>
+<dt>能統計英文單詞數嗎？</dt><dd>可以。去掉中文字元後，按空白切分出的連續片段即為西文單詞，適合英文論文與摘要的詞數限制核對。</dd>
+<dt>UTF-8 位元組數有什麼用？</dt><dd>資料庫欄位、表單與介面常按位元組限長。一個英文字母佔 1 位元組，一箇中文字元通常佔 3 位元組，位元組數能幫你避免超限被截斷。</dd>
+</dl>
+<h2>什麼時候用得上</h2>
+<ul class="scenes"><li>核對論文 / 報告是否滿足規定字數或詞數限制。</li><li>壓縮簡歷到一頁：盯住字元數與行數，刪到合適篇幅。</li><li>寫社媒文案時控制單條字元上限，避免被截斷。</li><li>為 SEO 標題與描述把字元數控制在顯示範圍內。</li><li>做大小寫 / 首字母轉換，快速規範英文標題與表頭。</li></ul>
+<div class="related"><h2>相關連結</h2>
+<div class="cta">需要在桌面端做更完整的字數統計、排版與多格式編輯？可以下載 WPS Office： <a href="https://wpsofficepro.com/download/">下載 WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">WPS 官網</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">WPS 功能介紹</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS 常見問題</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">Unicode 文字分段標準 UAX #29</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Microsoft Word 字數統計說明</a></li></ul></div>
+</main>
+<footer>由 Evan Lin 整理校訂。計數口徑參考 WPS 官方幫助、Microsoft Word「字數統計」說明與 Unicode 文字分段標準（UAX #29），均為公開資料、僅供參考。本工具純本地執行、不上傳文字。<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "分鐘", "copied": "已複製"};</script><script src="/app.js"></script>
+</body></html>
