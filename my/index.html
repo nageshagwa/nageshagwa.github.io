@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="my"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter - အွန်လိုင်းဇာတ်ကောင်၊ Word &amp; Paragraph Count + Case Converter</title>
+<meta name="description" content="အခမဲ့အွန်လိုင်းစကားလုံးနှင့် အက္ခရာများကို စာသားပြောင်းခြင်း- တရုတ်စာလုံးရေတွက်ခြင်း၊ အင်္ဂလိပ်စကားလုံးများ၊ စာလုံးများ (နေရာလွတ်များ/မပါသော)၊ လိုင်းများ၊ စာပိုဒ်များနှင့် UTF-8 bytes၊ အချိန်နှင့်တပြေးညီ၊ စာလုံးအကြီး၊ စာလုံးအကြီး၊ ချုံ့ခြင်းနှင့် မျဉ်းလွတ်တူးလ်များ။ စက်တွင်းတွင် အလုပ်လုပ်သည်၊ မည်သည့်အရာမျှ အပ်လုဒ်လုပ်၍မရပါ - WPS နှင့် Office စာရွက်စာတမ်းများကို စစ်ဆေးခြင်းအတွက် အဆင်ပြေသည်။">
+<link rel="canonical" href="https://nageshagwa.github.io/my/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Word Counter - အွန်လိုင်းဇာတ်ကောင်၊ Word &amp; Paragraph Count + Case Converter">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "အွန်လိုင်း Word Counter & Text Converter",
+   "url": "https://nageshagwa.github.io/my/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "my",
+   "description": "အခမဲ့အွန်လိုင်းစကားလုံးနှင့် အက္ခရာများကို စာသားပြောင်းခြင်း- တရုတ်စာလုံးရေတွက်ခြင်း၊ အင်္ဂလိပ်စကားလုံးများ၊ စာလုံးများ (နေရာလွတ်များ/မပါသော)၊ လိုင်းများ၊ စာပိုဒ်များနှင့် UTF-8 bytes၊ အချိန်နှင့်တပြေးညီ၊ စာလုံးအကြီး၊ စာလုံးအကြီး၊ ချုံ့ခြင်းနှင့် မျဉ်းလွတ်တူးလ်များ။ စက်တွင်းတွင် အလုပ်လုပ်သည်၊ မည်သည့်အရာမျှ အပ်လုဒ်လုပ်၍မရပါ - WPS နှင့် Office စာရွက်စာတမ်းများကို စစ်ဆေးခြင်းအတွက် အဆင်ပြေသည်။",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "my",
+   "url": "https://nageshagwa.github.io/my/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ဤစကားလုံးတန်ပြန်သည် ကျွန်ုပ်၏စာသားကို အပ်လုဒ်လုပ်ပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "နံပါတ်။ ရေတွက်ခြင်းနှင့် ပြောင်းလဲခြင်းအားလုံးသည် JavaScript ဖြင့် သင့်ဘရောက်ဆာတွင် စက်တွင်း၌ လုပ်ဆောင်သည်။ သင်၏စာတိုကို မည်သည့်ဆာဗာသို့မျှ မပို့ဘဲ စာမျက်နှာကို သင်ပိတ်သောအခါ ရှင်းလင်းသွားမည်ဖြစ်သည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "တရုတ်အက္ခရာတွေကို ဘယ်လိုရေတွက်သလဲ။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CJK ideograph၊ တိုးချဲ့မှု၊ kana နှင့် Hangul အကွာအဝေးရှိ ဇာတ်ကောင်တစ်ခုစီကို WPS နှင့် Word ရှိ \"တရုတ်စာလုံးများနှင့် ကိုရီးယားစကားလုံးများ\" တိုင်းတာမှုနှင့် ကိုက်ညီသော တရုတ်စာလုံးတစ်လုံးအဖြစ် ရေတွက်သည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "စကားလုံးများနှင့် ဇာတ်ကောင်များကြား ကွာခြားချက်မှာ အဘယ်နည်း။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "အက္ခရာများသည် နေရာလွတ်များနှင့် သတ်ပုံသတ်ပုံအပါအဝင် စာလုံးတိုင်းကို ရေတွက်သည်။ စကားလုံးများသည် တရုတ်အက္ခရာများ နှင့် အနောက်တိုင်းစကားလုံးများနှင့် ညီမျှသည်၊ အက်ဆေးများ သို့မဟုတ် အခပေးအရေးအသားအတွက် အသုံးပြုသည့် စကားလုံးအရေအတွက်နှင့် ပိုမိုနီးစပ်ပါသည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "၎င်းသည် WPS နှင့် Word စကားလုံးအရေအတွက်နှင့် ကိုက်ညီပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "တရုတ်စစ်စစ် သို့မဟုတ် အင်္ဂလိပ်စာသားစစ်စစ်အတွက် ၎င်းသည် များသောအားဖြင့် လိုက်ဖက်ပါသည်။ ရောစပ်ထားသော စာသားများ၊ သင်္ကေတများစွာ သို့မဟုတ် အကျယ်အဝန်း စာလုံးများပါရှိသည့် ကိရိယာတစ်ခုစီသည် သတ်ပုံနှင့် နေရာလွတ် အနည်းငယ်ကွဲပြားသောကြောင့် သေးငယ်သော ကွဲပြားမှု ရှိနိုင်ပါသည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "အင်္ဂလိပ်စကားလုံးများကို ရေတွက်နိုင်ပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ဟုတ်ကဲ့။ CJK စာလုံးများကို ဖယ်ရှားပြီးနောက်၊ ကန့်သတ်ထားသော နေရာလွတ်တစ်ခုစီသည် အင်္ဂလိပ်စာစီစာကုံးများနှင့် စိတ္တဇများတွင် စကားလုံးကန့်သတ်ချက်များအတွက် အသုံးဝင်သော အနောက်တိုင်းစကားလုံးတစ်ခုဖြစ်သည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UTF-8 byte အရေအတွက်က ဘာလဲ။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ဒေတာဘေ့စ်အကွက်များ၊ ဖောင်များနှင့် API များသည် အရှည်ကို bytes ဖြင့် ကန့်သတ်လေ့ရှိသည်။ လက်တင်အက္ခရာတစ်ခုသည် 1 byte နှင့် တရုတ်အက္ခရာတစ်ခုသည် များသောအားဖြင့် 3 ယူသည်၊ ထို့ကြောင့် byte အရေအတွက်သည် သင့်အား ဖြတ်တောက်ခံရခြင်းမှ ရှောင်ကြဉ်ရန် ကူညီပေးသည်။"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ဘာသာစကား- <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <strong>မြန်မာ</strong> · <a href="/th/">ไทย</a></nav>
+<h1>အွန်လိုင်း Word Counter &amp; Text Converter</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_my.webp"><img src="/img/cover_my.png" alt="အွန်လိုင်းစကားလုံးကောင်တာနှင့် စာသားပြောင်းသည့်ပုံဥပမာ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>ပုံ- အွန်လိုင်းစကားလုံးကောင်တာနှင့် စာသားပြောင်းသည့်စနစ် (CJK နှင့် လက်တင်စကားလုံးများ၊ စာလုံးများ၊ စာပိုဒ်များ)</figcaption></figure>
+<p>စာလုံးများ၊ တရုတ်စာလုံးများ၊ အင်္ဂလိပ်စကားလုံးများ၊ စာကြောင်းများ၊ စာပိုဒ်များနှင့် UTF-8 bytes အပ်ဒိတ်များကို <strong>အချိန်နှင့်တပြေးညီ</strong>ကြည့်ရှုရန် အောက်ပါအကွက်ထဲသို့ ကူးထည့်ကာ တစ်ချက်နှိပ်ရုံဖြင့် စာလုံးအကြီး၊ စာလုံးကြီး၊ နေရာလွတ်နှင့် အလွတ်စာကြောင်းများကို ပြောင်းပါ။ အရာအားလုံးသည် သင့်ဘရောက်ဆာတွင် စက်တွင်းလည်ပတ်နေပြီး <strong>ဘာမျှမအပ်လုဒ်လုပ်မထားပါ</strong> - စာစီစာကုံးများ၊ ကိုယ်ရေးမှတ်တမ်းများ၊ ဖောင်များ၊ လူမှုရေးပို့စ်များနှင့် WPS စာရွက်စာတမ်းများကို စစ်ဆေးခြင်းအတွက် အကောင်းဆုံးဖြစ်သည်။</p>
+<textarea id="wc-input" placeholder="စာသားကို ဤနေရာတွင် ကူးထည့်ပါ သို့မဟုတ် ရိုက်ထည့်ပါ - သင်ရိုက်သည့်အတိုင်း အရေအတွက် အပ်ဒိတ်များကို..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">အက္ခရာများ (နေရာလွတ်များ)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">စာလုံးများ (နေရာလွတ်မရှိ)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">တရုတ်စာလုံးများ</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">စကားလုံးများ (CJK စာလုံးများ + အနောက်တိုင်းစကားလုံးများ)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">လိုင်းများ</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">စာပိုဒ်များ</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 ဘိုက်</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">စာဖတ်ချိန်</div></div></div>
+<h2>စာသားပြောင်းခြင်း။</h2>
+<div class="ops"><button data-op="upper">UPPERCASE</button><button data-op="lower">စာလုံးသေး</button><button data-op="title">Title Case</button><button data-op="sentence">ဝါကျကိစ္စ</button><button data-op="trim">လိုင်းနေရာများကို ချုံ့ပါ။</button><button data-op="collapse">နေရာများကို ခေါက်သိမ်းပါ။</button><button data-op="blank">အလွတ်လိုင်းများကို ဖယ်ရှားပါ။</button><button data-op="sort">လိုင်းများကို စီပါ။</button><button data-op="copy" class="pri">ရလဒ်ကို ကူးယူပါ။</button><button data-op="clear">ရှင်းပါတယ်။</button></div>
+<h2>ရေတွက်နည်း</h2>
+<p>ကိရိယာသည် စာသားများကို မျဉ်းကြောင်းများနှင့် စာပိုဒ်များအဖြစ် ပိုင်းခြားပြီး အက္ခရာအလိုက် အက္ခရာများကို စကင်န်ဖတ်သည်- CJK ideograph၊ kana သို့မဟုတ် Hangul အပိုင်းအခြားရှိ မည်သည့်အရာကိုမဆို တရုတ်စာလုံးတစ်လုံးအဖြစ် ရေတွက်သည်၊ အခြားနေရာများတွင် နေရာလွတ်ဖြင့် ကန့်သတ်ထားသော run တစ်ခုစီသည် အနောက်တိုင်းစကားလုံးတစ်လုံးအဖြစ် ရေတွက်ပါသည်။ ၎င်းသည် WPS နှင့် Microsoft Word စကားလုံးရေတွက်ရှိ "တရုတ်စာလုံးများနှင့် ကိုရီးယားစကားလုံးများ" နှင့် "အင်္ဂလိပ်စကားလုံးများ" ယုတ္တိဗေဒနှင့် ကိုက်ညီသောကြောင့် ရောစပ်ထားသောစာသားကိုလည်း မှန်ကန်စွာရေတွက်ပါသည်။</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ပုံ 1- ထည့်သွင်းခြင်း -> စာလုံးတစ်လုံးစီကို စကင်န်ဖတ်ခြင်း -> အမျိုးအစားခွဲခြင်း (CJK char / အနောက်တိုင်းစကားလုံး) -> စုစုပေါင်း" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">စာသားထည့်ပါ။</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ဇာတ်ကောင်တစ်ခုစီကိ</text><text x="302" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ု စကင်ဖတ်ပါ။</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">အမျိုးအစားခွဲရန်- </text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">CJK char / အနောက်တ</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">စုစုပေါင်း</text></svg><figcaption>ပုံ 1- ထည့်သွင်းခြင်း -&gt; စာလုံးတစ်လုံးစီကို စကင်န်ဖတ်ခြင်း -&gt; အမျိုးအစားခွဲခြင်း (CJK char / အနောက်တိုင်းစကားလုံး) -&gt; စုစုပေါင်း</figcaption></figure>
+<h2>ဘာရေတွက်မလဲ။</h2>
+<p>အက္ခရာများ (နေရာလွတ်များ) သည် နေရာလွတ်များနှင့် သတ်ပုံသတ်ပုံအပါအဝင် စာလုံးတိုင်းကို ရေတွက်သည်။ အက္ခရာများ (နေရာလွတ်မရှိ) သည် နေရာလွတ်အားလုံးကို လွှတ်ချလိုက်သည် ။ တရုတ်အက္ခရာများသည် အယူဝါဒများနှင့် kana/Hangul တို့ကိုသာ ရေတွက်သည်။ စာပိုဒ်များကို အလွတ်လိုင်းများဖြင့် ပိုင်းခြားထားသည်။ CR/LF နှင့် တက်ဘ်များကဲ့သို့ မမြင်နိုင်သော ဇာတ်ကောင်များသည် byte အရေအတွက်ကို အကျိုးသက်ရောက်သော်လည်း မူရင်းအားဖြင့် စကားလုံးများအဖြစ် မရေတွက်ပါ။</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_my.webp"><img src="/img/board_my.png" alt="Word-count logic ပုံဥပမာ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>ပုံ- CJK char နှင့် အနောက်တိုင်းစကားလုံးတစ်လုံးစီကို 1 အဖြစ်ရေတွက်သည်၊ ထို့ကြောင့် ရောစပ်ထားသောစာသားကို မှန်ကန်စွာရေတွက်သည်။</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ပုံ 2- အကြောင်းအရာတစ်ခုစီကို မည်သို့ရေတွက်သည်" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">ရေတွက်ခြင်း ယုတ္တိဗေဒ</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">CJK အက္ခရာ = 1 တစ်ခုစီ</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">အနောက်တိုင်းစကားလုံး = ၁လုံးစီ</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">Space- စကားလုံးတစ်လုံးမဟုတ်ဘဲ ဇာတ်ကောင်အဖြစ် ရေတွက်သည်။</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">မျဉ်းဗလာ = စာပိုဒ်ကွဲ</text></svg><figcaption>ပုံ 2- အကြောင်းအရာတစ်ခုစီကို မည်သို့ရေတွက်သည်</figcaption></figure>
+<h2 id="i4data">စကားလုံးအရေအတွက်နှင့် စာဖတ်ချိန် ရည်ညွှန်းခန့်မှန်းချက် (2026)</h2>
+<p>သာမန်ကိန်းဂဏန်းအနည်းငယ်က သင့်အရှည်ကို တစ်ချက်ကြည့်ပြီး ဆုံးဖြတ်ရန် ကူညီပေးသည်။ စာဖတ်ချိန်ကို အမြန်နှုန်းဖြင့် ပိုင်းခြားကာ တစ်မိနစ်လျှင် စကားလုံး 200 ခန့်ဖြင့် ခန့်မှန်းသည်။</p>
+<table class="data"><tbody>
+<tr><td>အင်္ဂလိပ် အသံတိတ် စာဖတ်နှုန်း</td><td>≈ 238 words/min</td><td class="note">စာဖတ်နှုန်း meta-analysis မှ (Brysbaert၊ 2019)</td></tr>
+<tr><td>မူရင်းတရုတ်စာဖတ်နှုန်း</td><td>≈ 255 chars/min</td><td class="note">အများသူငှာ ခန့်မှန်းချက်</td></tr>
+<tr><td>A4 စာမျက်နှာတစ်ခု (12pt၊ တစ်ခုတည်းအကွာ)</td><td>≈ 500 words / 800 chars</td><td class="note">ပုံမှန်စာရိုက်ခြင်း ခန့်မှန်းချက်</td></tr>
+<tr><td>လူမှုရေးပို့စ် ဇာတ်ကောင်ကန့်သတ်ချက် (ကိုးကား)</td><td>280 / 140 characters</td><td class="note">အများသူငှာ ပလက်ဖောင်း စည်းမျဉ်း၊ ပြောင်းလဲနိုင်သည်။</td></tr>
+<tr><td>အတိုအထွာပြသမှု အရှည်ကို ရှာပါ။</td><td>≈ 155 characters</td><td class="note">လက်မစည်းမျဉ်း (920 pixels ခန့်)</td></tr>
+</tbody></table>
+<p class="note">၎င်းတို့သည် အများသူငှာ ရင်းမြစ်များမှ ပြုစုထားသော ခန့်မှန်းချက်များဖြစ်ပြီး၊ ပထမလက်ဖြင့် တိုင်းတာခြင်းမဟုတ်ဘဲ ကိုးကားရန်အတွက်သာဖြစ်သည်။ ပလက်ဖောင်းစည်းမျဉ်းများသည် အချိန်နှင့်အမျှ ပြောင်းလဲနိုင်သည်။</p>
+<h2>မေးလေ့ရှိသောမေးခွန်းများ</h2>
+<dl class="faq">
+<dt>ဤစကားလုံးတန်ပြန်သည် ကျွန်ုပ်၏စာသားကို အပ်လုဒ်လုပ်ပါသလား။</dt><dd>နံပါတ်။ ရေတွက်ခြင်းနှင့် ပြောင်းလဲခြင်းအားလုံးသည် JavaScript ဖြင့် သင့်ဘရောက်ဆာတွင် စက်တွင်း၌ လုပ်ဆောင်သည်။ သင်၏စာတိုကို မည်သည့်ဆာဗာသို့မျှ မပို့ဘဲ စာမျက်နှာကို သင်ပိတ်သောအခါ ရှင်းလင်းသွားမည်ဖြစ်သည်။</dd>
+<dt>တရုတ်အက္ခရာတွေကို ဘယ်လိုရေတွက်သလဲ။</dt><dd>CJK ideograph၊ တိုးချဲ့မှု၊ kana နှင့် Hangul အကွာအဝေးရှိ ဇာတ်ကောင်တစ်ခုစီကို WPS နှင့် Word ရှိ "တရုတ်စာလုံးများနှင့် ကိုရီးယားစကားလုံးများ" တိုင်းတာမှုနှင့် ကိုက်ညီသော တရုတ်စာလုံးတစ်လုံးအဖြစ် ရေတွက်သည်။</dd>
+<dt>စကားလုံးများနှင့် ဇာတ်ကောင်များကြား ကွာခြားချက်မှာ အဘယ်နည်း။</dt><dd>အက္ခရာများသည် နေရာလွတ်များနှင့် သတ်ပုံသတ်ပုံအပါအဝင် စာလုံးတိုင်းကို ရေတွက်သည်။ စကားလုံးများသည် တရုတ်အက္ခရာများ နှင့် အနောက်တိုင်းစကားလုံးများနှင့် ညီမျှသည်၊ အက်ဆေးများ သို့မဟုတ် အခပေးအရေးအသားအတွက် အသုံးပြုသည့် စကားလုံးအရေအတွက်နှင့် ပိုမိုနီးစပ်ပါသည်။</dd>
+<dt>၎င်းသည် WPS နှင့် Word စကားလုံးအရေအတွက်နှင့် ကိုက်ညီပါသလား။</dt><dd>တရုတ်စစ်စစ် သို့မဟုတ် အင်္ဂလိပ်စာသားစစ်စစ်အတွက် ၎င်းသည် များသောအားဖြင့် လိုက်ဖက်ပါသည်။ ရောစပ်ထားသော စာသားများ၊ သင်္ကေတများစွာ သို့မဟုတ် အကျယ်အဝန်း စာလုံးများပါရှိသည့် ကိရိယာတစ်ခုစီသည် သတ်ပုံနှင့် နေရာလွတ် အနည်းငယ်ကွဲပြားသောကြောင့် သေးငယ်သော ကွဲပြားမှု ရှိနိုင်ပါသည်။</dd>
+<dt>အင်္ဂလိပ်စကားလုံးများကို ရေတွက်နိုင်ပါသလား။</dt><dd>ဟုတ်ကဲ့။ CJK စာလုံးများကို ဖယ်ရှားပြီးနောက်၊ ကန့်သတ်ထားသော နေရာလွတ်တစ်ခုစီသည် အင်္ဂလိပ်စာစီစာကုံးများနှင့် စိတ္တဇများတွင် စကားလုံးကန့်သတ်ချက်များအတွက် အသုံးဝင်သော အနောက်တိုင်းစကားလုံးတစ်ခုဖြစ်သည်။</dd>
+<dt>UTF-8 byte အရေအတွက်က ဘာလဲ။</dt><dd>ဒေတာဘေ့စ်အကွက်များ၊ ဖောင်များနှင့် API များသည် အရှည်ကို bytes ဖြင့် ကန့်သတ်လေ့ရှိသည်။ လက်တင်အက္ခရာတစ်ခုသည် 1 byte နှင့် တရုတ်အက္ခရာတစ်ခုသည် များသောအားဖြင့် 3 ယူသည်၊ ထို့ကြောင့် byte အရေအတွက်သည် သင့်အား ဖြတ်တောက်ခံရခြင်းမှ ရှောင်ကြဉ်ရန် ကူညီပေးသည်။</dd>
+</dl>
+<h2>ဒီအခါမှာ အသုံးဝင်ပါတယ်။</h2>
+<ul class="scenes"><li>စာစီစာကုံး သို့မဟုတ် အစီရင်ခံစာသည် လိုအပ်သော စကားလုံး သို့မဟုတ် စာလုံးကန့်သတ်ချက်နှင့် ကိုက်ညီမှုရှိမရှိ စစ်ဆေးပါ။</li><li>ဇာတ်ကောင်များနှင့် စာကြောင်းအရေအတွက်များကို ကြည့်ရှုခြင်းဖြင့် စာမျက်နှာတစ်ခုသို့ ကိုယ်ရေးမှတ်တမ်းကို ချုံ့ပါ။</li><li>လူမှုကွန်ရက်ပို့စ်များကို ဖြတ်တောက်ခြင်းမခံရစေရန်အတွက် ပို့စ်တစ်ခုအတွက် စာလုံးကန့်သတ်ချက်အောက်တွင်ထားပါ။</li><li>ဖော်ပြထားသော စာလုံးအကွာအဝေးအတွင်း SEO ခေါင်းစဉ်များနှင့် ဖော်ပြချက်များကို ထားရှိပါ။</li><li>အင်္ဂလိပ် ခေါင်းစဉ်များနှင့် ခေါင်းစီးများကို လျင်မြန်စွာ သပ်ရပ်အောင် ပြုလုပ်ရန် စာလုံးကြီးနှင့် စာလုံးကြီးအဖြစ် ပြောင်းပါ။</li></ul>
+<div class="related"><h2>ဆက်စပ်လင့်များ</h2>
+<div class="cta">ဒက်စတော့တွင် စာလုံးရေတွက်ခြင်း၊ အပြင်အဆင်နှင့် ဖော်မက်ပေါင်းများစွာတည်းဖြတ်ခြင်း လိုအပ်ပါသလား။ WPS Office ကိုဒေါင်းလုဒ်လုပ်ပါ <a href="https://wpsofficepro.com/download/">WPS Office ကိုဒေါင်းလုဒ်လုပ်ပါ။</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">WPS တရားဝင်ဆိုက်</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">WPS အင်္ဂါရပ်များ</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS FAQ</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">ယူနီကုဒ် စာသား အပိုင်းခွဲခြင်း (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Microsoft Word စကားလုံးရေတွက်ကူညီမှု</a></li></ul></div>
+</main>
+<footer>Evan Lin တည်းဖြတ်သည်။ ယုတ္တိဗေဒဆိုင်ရာ အကိုးအကားများကို ရေတွက်ခြင်း WPS တရားဝင်အကူအညီ၊ Microsoft Word စကားလုံးရေတွက်စာရွက်စာတမ်းများနှင့် ယူနီကုဒ်စာသားခွဲခြားမှုစံနှုန်း (UAX #29)၊ အများသူငှာ အရင်းအမြစ်အားလုံးနှင့် ကိုးကားရန်အတွက်သာ။ ဤကိရိယာသည် စက်တွင်း၌ လုံးလုံးလျားလျား အလုပ်လုပ်ပြီး မည်သည့်အရာမျှ မတင်ပါ။<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "မိ", "copied": "ကူးယူသည်။"};</script><script src="/app.js"></script>
+</body></html>
