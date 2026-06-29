@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="km"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter - តួអក្សរអនឡាញ ចំនួនពាក្យ និងកថាខណ្ឌ + កម្មវិធីបំប្លែងករណី</title>
+<meta name="description" content="ការរាប់ពាក្យ និងតួអក្សរតាមអ៊ីនធឺណិតដោយឥតគិតថ្លៃជាមួយនឹងការបំប្លែងអត្ថបទ៖ រាប់តួអក្សរចិន ពាក្យអង់គ្លេស តួអក្សរ (មាន/គ្មានចន្លោះ) បន្ទាត់ កថាខណ្ឌ និង UTF-8 បៃក្នុងពេលវេលាជាក់ស្តែង បូកករណី អក្សរធំ កាត់ និងឧបករណ៍បន្ទាត់ទទេ។ ដំណើរការក្នុងមូលដ្ឋាន គ្មានអ្វីត្រូវបានអាប់ឡូតទេ ងាយស្រួលសម្រាប់ពិនិត្យមើលឯកសារ WPS និង Office។">
+<link rel="canonical" href="https://nageshagwa.github.io/km/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Word Counter - តួអក្សរអនឡាញ ចំនួនពាក្យ និងកថាខណ្ឌ + កម្មវិធីបំប្លែងករណី">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "កម្មវិធីបំលែងពាក្យ និងកម្មវិធីបំប្លែងអក្សរតាមអ៊ីនធឺណិត",
+   "url": "https://nageshagwa.github.io/km/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "km",
+   "description": "ការរាប់ពាក្យ និងតួអក្សរតាមអ៊ីនធឺណិតដោយឥតគិតថ្លៃជាមួយនឹងការបំប្លែងអត្ថបទ៖ រាប់តួអក្សរចិន ពាក្យអង់គ្លេស តួអក្សរ (មាន/គ្មានចន្លោះ) បន្ទាត់ កថាខណ្ឌ និង UTF-8 បៃក្នុងពេលវេលាជាក់ស្តែង បូកករណី អក្សរធំ កាត់ និងឧបករណ៍បន្ទាត់ទទេ។ ដំណើរការក្នុងមូលដ្ឋាន គ្មានអ្វីត្រូវបានអាប់ឡូតទេ ងាយស្រួលសម្រាប់ពិនិត្យមើលឯកសារ WPS និង Office។",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "km",
+   "url": "https://nageshagwa.github.io/km/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "តើពាក្យនេះរាប់បញ្ចូលអត្ថបទរបស់ខ្ញុំទេ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ទេ ការរាប់ និងការបំប្លែងទាំងអស់ដំណើរការក្នុងមូលដ្ឋាននៅក្នុងកម្មវិធីរុករកតាមអ៊ីនធឺណិតរបស់អ្នកដោយប្រើ JavaScript ។ អត្ថបទរបស់អ្នកមិនដែលត្រូវបានផ្ញើទៅកាន់ម៉ាស៊ីនមេណាមួយឡើយ ហើយត្រូវបានសម្អាតនៅពេលអ្នកបិទទំព័រ។"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "តើអក្សរចិនត្រូវបានរាប់យ៉ាងដូចម្តេច?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "តួអក្សរនីមួយៗនៅក្នុងជួរ CJK ideograph, extension, kana និង Hangul រាប់ជាតួអក្សរចិនតែមួយ ដោយត្រូវគ្នានឹងវិធានការ \"អក្សរចិន និងពាក្យកូរ៉េ\" នៅក្នុង WPS និង Word ។"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "តើអ្វីជាភាពខុសគ្នារវាងពាក្យ និងតួអក្សរ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "តួអក្សររាប់តួអក្សរនីមួយៗ រួមទាំងដកឃ្លា និងវណ្ណយុត្តិ។ ពាក្យស្មើនឹងអក្សរចិន បូកនឹងពាក្យលោកខាងលិច កាន់តែជិតទៅនឹងចំនួនពាក្យដែលប្រើសម្រាប់ការសរសេរអត្ថបទ ឬការសរសេរបង់ប្រាក់។"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "តើវាផ្គូផ្គងនឹងចំនួនពាក្យ WPS និង Word ទេ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "សម្រាប់អត្ថបទភាសាចិនសុទ្ធ ឬភាសាអង់គ្លេសសុទ្ធ វាជាធម្មតាត្រូវគ្នា; ជា​មួយ​នឹង​អត្ថបទ​ចម្រុះ និមិត្តសញ្ញា​ជា​ច្រើន ឬ​តួអក្សរ​ពេញ​ទទឹង​អាច​នឹង​មាន​ភាព​ខុស​គ្នា​បន្តិច​បន្តួច ព្រោះ​ឧបករណ៍​នីមួយៗ​ចាត់​ថ្នាក់​វណ្ណយុត្តិ និង​ចន្លោះ​ខុស​គ្នា​បន្តិច។"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "តើវាអាចរាប់ពាក្យអង់គ្លេសបានទេ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "បាទ។ បន្ទាប់ពីដកតួអក្សរ CJK ចេញ ការរត់ដែលកំណត់ដកឃ្លានីមួយៗគឺជាពាក្យបស្ចិមប្រទេស ដែលមានប្រយោជន៍សម្រាប់ការកំណត់ពាក្យលើអត្ថបទភាសាអង់គ្លេស និងអរូបី។"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "តើ UTF-8 បៃរាប់សម្រាប់អ្វី?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "វាលមូលដ្ឋានទិន្នន័យ ទម្រង់ និង API ច្រើនតែកំណត់ប្រវែងដោយបៃ។ អក្សរឡាតាំងប្រើ 1 បៃ ហើយអក្សរចិនជាធម្មតាយក 3 ដូច្នេះចំនួនបៃជួយអ្នកជៀសវាងការកាត់។"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ភាសា៖ <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <strong>ភាសាខ្មែរ</strong> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>កម្មវិធីបំលែងពាក្យ និងកម្មវិធីបំប្លែងអក្សរតាមអ៊ីនធឺណិត</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_km.webp"><img src="/img/cover_km.png" alt="ការរាប់ពាក្យតាមអ៊ីនធឺណិត និងរូបភាពកម្មវិធីបម្លែងអត្ថបទ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>រូបភាព៖ កម្មវិធីរាប់ពាក្យតាមអ៊ីនធឺណិត និងកម្មវិធីបំប្លែងអត្ថបទ (CJK &amp; ពាក្យឡាតាំង តួអក្សរ កថាខណ្ឌ)</figcaption></figure>
+<p>បិទភ្ជាប់អត្ថបទរបស់អ្នកទៅក្នុងប្រអប់ខាងក្រោម ដើម្បីមើលតួអក្សរ អក្សរចិន ពាក្យអង់គ្លេស បន្ទាត់ កថាខណ្ឌ និង UTF-8 bytes អាប់ដេតក្នុង <strong>ពេលវេលាពិត</strong> ហើយបំប្លែងករណី អក្សរធំ ដកឃ្លា និងបន្ទាត់ទទេដោយចុចតែម្តង។ អ្វីគ្រប់យ៉ាងដំណើរការក្នុងមូលដ្ឋាននៅក្នុងកម្មវិធីរុករករបស់អ្នក ហើយ <strong>គ្មានអ្វីត្រូវបានផ្ទុកឡើងទេ</strong> - ល្អសម្រាប់ពិនិត្យមើលការសរសេរអត្ថបទ ប្រវត្តិរូបសង្ខេប ទម្រង់ ការបង្ហោះសង្គម និងឯកសារ WPS ។</p>
+<textarea id="wc-input" placeholder="បិទភ្ជាប់ ឬវាយអត្ថបទនៅទីនេះ - ការធ្វើបច្ចុប្បន្នភាពចំនួនរាប់នៅពេលអ្នកវាយ..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">តួអក្សរ (មានដកឃ្លា)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">តួអក្សរ (គ្មានចន្លោះ)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">អក្សរចិន</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">ពាក្យ (អក្សរ CJK + ពាក្យលោកខាងលិច)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">បន្ទាត់</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">កថាខណ្ឌ</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 បៃ</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">ពេលវេលាអាន</div></div></div>
+<h2>ការបម្លែងអត្ថបទ</h2>
+<div class="ops"><button data-op="upper">ករណីខាងលើ</button><button data-op="lower">អក្សរតូច</button><button data-op="title">ករណីចំណងជើង</button><button data-op="sentence">ករណីកាត់ទោស</button><button data-op="trim">កាត់​ចន្លោះ​បន្ទាត់</button><button data-op="collapse">បង្រួមចន្លោះ</button><button data-op="blank">យកបន្ទាត់ទទេចេញ</button><button data-op="sort">តម្រៀបបន្ទាត់</button><button data-op="copy" class="pri">ចម្លងលទ្ធផល</button><button data-op="clear">ច្បាស់</button></div>
+<h2>របៀបដែលចំនួនត្រូវបានគណនា</h2>
+<p>ឧបករណ៍នេះដំបូងបំបែកអត្ថបទទៅជាបន្ទាត់ និងកថាខណ្ឌដោយការបំបែកបន្ទាត់ បន្ទាប់មកស្កេនតួអក្សរតាមតួអក្សរ៖ អ្វីទាំងអស់នៅក្នុងជួរ ideograph CJK, kana ឬ Hangul រាប់ជាតួអក្សរចិនតែមួយ ខណៈដែលការរត់ដែលកំណត់ដកឃ្លានីមួយៗនៅកន្លែងផ្សេងទៀតរាប់ជាពាក្យលោកខាងលិចតែមួយ។ វាផ្គូផ្គងនឹងតក្កវិជ្ជា "អក្សរចិន និងពាក្យកូរ៉េ" បូកនឹងតក្កវិជ្ជា "ពាក្យអង់គ្លេស" នៅក្នុង WPS និង Microsoft Word ចំនួនពាក្យ ដូច្នេះអត្ថបទចម្រុះក៏រាប់បានត្រឹមត្រូវ។</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="រូបភាពទី 1: បញ្ចូល -> ស្កេនតួអក្សរនីមួយៗ -> ចាត់ថ្នាក់ (CJK char / ពាក្យខាងលិច) -> សរុប" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">បញ្ចូលអត្ថបទ</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ស្កេនតួអក្សរនីមួយៗ</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ចាត់ថ្នាក់៖ CJK ch</text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">ar / ពាក្យខាងលិច</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">សរុប</text></svg><figcaption>រូបភាពទី 1: បញ្ចូល -&gt; ស្កេនតួអក្សរនីមួយៗ -&gt; ចាត់ថ្នាក់ (CJK char / ពាក្យខាងលិច) -&gt; សរុប</figcaption></figure>
+<h2>អ្វីដែលត្រូវបានរាប់</h2>
+<p>តួអក្សរ (មានដកឃ្លា) រាប់តួអក្សរនីមួយៗ រួមទាំងដកឃ្លា និងវណ្ណយុត្តិ។ តួអក្សរ (គ្មានចន្លោះ) ទម្លាក់ចន្លោះទទេទាំងអស់; អក្សរ​ចិន​រាប់​តែ​អត្តសញ្ញាណប័ណ្ណ​និង​កាណា/ហានហ្គុល កថាខណ្ឌត្រូវបានបំបែកដោយបន្ទាត់ទទេ។ តួអក្សរដែលមើលមិនឃើញដូចជា CR/LF និងផ្ទាំងប៉ះពាល់ដល់ចំនួនបៃ ប៉ុន្តែមិនត្រូវបានរាប់ជាពាក្យតាមលំនាំដើមទេ។</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_km.webp"><img src="/img/board_km.png" alt="ការ​បង្ហាញ​តក្កវិជ្ជា​រាប់​ពាក្យ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>រូបភាព៖ តួអក្សរ CJK និងពាក្យលោកខាងលិចនីមួយៗរាប់ជា 1 ដូច្នេះអត្ថបទចម្រុះរាប់បានត្រឹមត្រូវ។</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="រូបភាពទី 2: របៀបរាប់ប្រភេទមាតិកានីមួយៗ" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">ការរាប់តក្កវិជ្ជា</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">តួអក្សរ CJK = 1 នីមួយៗ</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">ពាក្យខាងលិច = 1 នីមួយៗ</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">លំហ៖ រាប់ជាតួអក្សរ មិនមែនពាក្យទេ។</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">បន្ទាត់ទទេ = បំបែកកថាខណ្ឌ</text></svg><figcaption>រូបភាពទី 2: របៀបរាប់ប្រភេទមាតិកានីមួយៗ</figcaption></figure>
+<h2 id="i4data">ការ​ប៉ាន់​ប្រមាណ​ការ​រាប់​ពាក្យ និង​ម៉ោង​អាន (2026)</h2>
+<p>តួលេខទូទៅមួយចំនួនជួយអ្នកវិនិច្ឆ័យប្រវែងមួយភ្លែត។ ពេលវេលាអានត្រូវបានប៉ាន់ប្រមាណជាពាក្យដែលបែងចែកដោយល្បឿន លំនាំដើមប្រហែល 200 ពាក្យក្នុងមួយនាទី។</p>
+<table class="data"><tbody>
+<tr><td>ល្បឿនអានភាសាអង់គ្លេសស្ងាត់</td><td>≈ 238 words/min</td><td class="note">ពីការវិភាគមេតាអត្រាការអាន (Brysbaert, 2019)</td></tr>
+<tr><td>ល្បឿនអានភាសាចិនលំនាំដើម</td><td>≈ 255 chars/min</td><td class="note">ការប៉ាន់ស្មានសាធារណៈទូទៅ</td></tr>
+<tr><td>មួយទំព័រ A4 (12pt, គម្លាតតែមួយ)</td><td>≈ 500 words / 800 chars</td><td class="note">ការប៉ាន់ស្មានប្រភេទធម្មតា។</td></tr>
+<tr><td>ដែនកំណត់តួអក្សរប្រកាសសង្គម (យោង)</td><td>280 / 140 characters</td><td class="note">ច្បាប់វេទិកាសាធារណៈ អាចផ្លាស់ប្តូរ</td></tr>
+<tr><td>ស្វែងរកប្រវែងបង្ហាញអត្ថបទ</td><td>≈ 155 characters</td><td class="note">ច្បាប់មេដៃ (ប្រហែល 920 ភីកសែល)</td></tr>
+</tbody></table>
+<p class="note">ទាំងនេះគឺជាការប៉ាន់ប្រមាណដែលចងក្រងពីប្រភពសាធារណៈ មិនមែនជាការវាស់វែងដោយដៃផ្ទាល់ទេ ហើយគឺសម្រាប់ជាឯកសារយោងតែប៉ុណ្ណោះ។ ច្បាប់វេទិកាអាចផ្លាស់ប្តូរតាមពេលវេលា។</p>
+<h2>សំណួរដែលគេសួរញឹកញាប់</h2>
+<dl class="faq">
+<dt>តើពាក្យនេះរាប់បញ្ចូលអត្ថបទរបស់ខ្ញុំទេ?</dt><dd>ទេ ការរាប់ និងការបំប្លែងទាំងអស់ដំណើរការក្នុងមូលដ្ឋាននៅក្នុងកម្មវិធីរុករកតាមអ៊ីនធឺណិតរបស់អ្នកដោយប្រើ JavaScript ។ អត្ថបទរបស់អ្នកមិនដែលត្រូវបានផ្ញើទៅកាន់ម៉ាស៊ីនមេណាមួយឡើយ ហើយត្រូវបានសម្អាតនៅពេលអ្នកបិទទំព័រ។</dd>
+<dt>តើអក្សរចិនត្រូវបានរាប់យ៉ាងដូចម្តេច?</dt><dd>តួអក្សរនីមួយៗនៅក្នុងជួរ CJK ideograph, extension, kana និង Hangul រាប់ជាតួអក្សរចិនតែមួយ ដោយត្រូវគ្នានឹងវិធានការ "អក្សរចិន និងពាក្យកូរ៉េ" នៅក្នុង WPS និង Word ។</dd>
+<dt>តើអ្វីជាភាពខុសគ្នារវាងពាក្យ និងតួអក្សរ?</dt><dd>តួអក្សររាប់តួអក្សរនីមួយៗ រួមទាំងដកឃ្លា និងវណ្ណយុត្តិ។ ពាក្យស្មើនឹងអក្សរចិន បូកនឹងពាក្យលោកខាងលិច កាន់តែជិតទៅនឹងចំនួនពាក្យដែលប្រើសម្រាប់ការសរសេរអត្ថបទ ឬការសរសេរបង់ប្រាក់។</dd>
+<dt>តើវាផ្គូផ្គងនឹងចំនួនពាក្យ WPS និង Word ទេ?</dt><dd>សម្រាប់អត្ថបទភាសាចិនសុទ្ធ ឬភាសាអង់គ្លេសសុទ្ធ វាជាធម្មតាត្រូវគ្នា; ជា​មួយ​នឹង​អត្ថបទ​ចម្រុះ និមិត្តសញ្ញា​ជា​ច្រើន ឬ​តួអក្សរ​ពេញ​ទទឹង​អាច​នឹង​មាន​ភាព​ខុស​គ្នា​បន្តិច​បន្តួច ព្រោះ​ឧបករណ៍​នីមួយៗ​ចាត់​ថ្នាក់​វណ្ណយុត្តិ និង​ចន្លោះ​ខុស​គ្នា​បន្តិច។</dd>
+<dt>តើវាអាចរាប់ពាក្យអង់គ្លេសបានទេ?</dt><dd>បាទ។ បន្ទាប់ពីដកតួអក្សរ CJK ចេញ ការរត់ដែលកំណត់ដកឃ្លានីមួយៗគឺជាពាក្យបស្ចិមប្រទេស ដែលមានប្រយោជន៍សម្រាប់ការកំណត់ពាក្យលើអត្ថបទភាសាអង់គ្លេស និងអរូបី។</dd>
+<dt>តើ UTF-8 បៃរាប់សម្រាប់អ្វី?</dt><dd>វាលមូលដ្ឋានទិន្នន័យ ទម្រង់ និង API ច្រើនតែកំណត់ប្រវែងដោយបៃ។ អក្សរឡាតាំងប្រើ 1 បៃ ហើយអក្សរចិនជាធម្មតាយក 3 ដូច្នេះចំនួនបៃជួយអ្នកជៀសវាងការកាត់។</dd>
+</dl>
+<h2>នៅពេលដែលវាមានប្រយោជន៍</h2>
+<ul class="scenes"><li>ពិនិត្យមើលថាតើអត្ថបទ ឬរបាយការណ៍ត្រូវនឹងពាក្យ ឬដែនកំណត់តួអក្សរដែលត្រូវការ។</li><li>កាត់ប្រវត្តិរូបទៅទំព័រមួយដោយមើលតួអក្សរ និងចំនួនបន្ទាត់។</li><li>រក្សាការបង្ហោះសង្គមនៅក្រោមដែនកំណត់តួអក្សរក្នុងមួយប្រកាស ដូច្នេះពួកវាមិនត្រូវបានកាត់ផ្តាច់។</li><li>រក្សាចំណងជើង SEO និងការពិពណ៌នានៅក្នុងជួរតួអក្សរដែលបានបង្ហាញ។</li><li>បំប្លែងអក្សរ និងអក្សរធំទៅជាចំណងជើង និងបឋមកថាភាសាអង់គ្លេសយ៉ាងរហ័ស។</li></ul>
+<div class="related"><h2>តំណភ្ជាប់ដែលពាក់ព័ន្ធ</h2>
+<div class="cta">ត្រូវ​ការ​ចំនួន​ពាក្យ​ពេញលេញ ប្លង់ និង​ការ​កែសម្រួល​ទម្រង់​ច្រើន​លើ​ផ្ទៃតុ​មែនទេ? ទាញយក WPS Office៖ <a href="https://wpsofficepro.com/download/">ទាញយក WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">គេហទំព័រផ្លូវការរបស់ WPS</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">លក្ខណៈពិសេសរបស់ WPS</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS FAQ</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">ការបែងចែកអត្ថបទយូនីកូដ (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">ជំនួយរាប់ពាក្យ Microsoft Word</a></li></ul></div>
+</main>
+<footer>កែសម្រួលដោយ Evan Lin ។ ការរាប់សេចក្តីយោងតក្កវិជ្ជា ជំនួយផ្លូវការរបស់ WPS ឯកសាររាប់ពាក្យ Microsoft Word និងស្តង់ដារ Unicode Text Segmentation (UAX #29) ប្រភពសាធារណៈទាំងអស់ និងសម្រាប់តែឯកសារយោងប៉ុណ្ណោះ។ ឧបករណ៍នេះដំណើរការទាំងស្រុងក្នុងមូលដ្ឋាន ហើយមិនបង្ហោះអ្វីទាំងអស់។<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "នាទី", "copied": "ចម្លង"};</script><script src="/app.js"></script>
+</body></html>
