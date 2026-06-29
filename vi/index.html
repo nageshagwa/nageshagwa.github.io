@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bộ đếm từ - Đếm ký tự, từ &amp; đoạn văn trực tuyến + Chuyển đổi chữ hoa chữ thường</title>
+<meta name="description" content="Bộ đếm từ và ký tự trực tuyến miễn phí với tính năng chuyển đổi văn bản: đếm ký tự tiếng Trung, từ tiếng Anh, ký tự (có/không có dấu cách), dòng, đoạn văn và byte UTF-8 trong thời gian thực, các công cụ viết hoa, viết hoa, cắt và dòng trống. Chạy cục bộ, không có gì được tải lên - tiện dụng để kiểm tra tài liệu WPS và Office.">
+<link rel="canonical" href="https://nageshagwa.github.io/vi/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Bộ đếm từ - Đếm ký tự, từ &amp; đoạn văn trực tuyến + Chuyển đổi chữ hoa chữ thường">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Bộ đếm từ & chuyển đổi văn bản trực tuyến",
+   "url": "https://nageshagwa.github.io/vi/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "vi",
+   "description": "Bộ đếm từ và ký tự trực tuyến miễn phí với tính năng chuyển đổi văn bản: đếm ký tự tiếng Trung, từ tiếng Anh, ký tự (có/không có dấu cách), dòng, đoạn văn và byte UTF-8 trong thời gian thực, các công cụ viết hoa, viết hoa, cắt và dòng trống. Chạy cục bộ, không có gì được tải lên - tiện dụng để kiểm tra tài liệu WPS và Office.",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "vi",
+   "url": "https://nageshagwa.github.io/vi/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Bộ đếm từ này có tải lên văn bản của tôi không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Không. Tất cả việc đếm và chuyển đổi đều chạy cục bộ trong trình duyệt của bạn bằng JavaScript; văn bản của bạn không bao giờ được gửi đến bất kỳ máy chủ nào và sẽ bị xóa khi bạn đóng trang."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ký tự tiếng Trung được tính như thế nào?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mỗi ký tự trong phạm vi chữ tượng hình, phần mở rộng, kana và Hangul của CJK được tính là một ký tự tiếng Trung, khớp với thước đo \"ký tự tiếng Trung và từ tiếng Hàn\" trong WPS và Word."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sự khác biệt giữa các từ và ký tự là gì?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ký tự đếm mọi ký tự bao gồm dấu cách và dấu câu; từ bằng các ký tự Trung Quốc cộng với các từ phương Tây, gần với số lượng từ được sử dụng cho các bài tiểu luận hoặc viết trả phí."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nó có khớp với số từ WPS và Word không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Đối với văn bản thuần tiếng Trung hoặc tiếng Anh thuần túy, nó thường khớp; với văn bản hỗn hợp, nhiều ký hiệu hoặc ký tự có độ rộng đầy đủ có thể có sự khác biệt nhỏ vì mỗi công cụ phân loại dấu câu và dấu cách hơi khác nhau."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Nó có đếm được từ tiếng Anh không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Đúng. Sau khi loại bỏ các ký tự CJK, mỗi dòng được phân cách bằng khoảng trắng là một từ phương Tây, rất hữu ích cho việc giới hạn số từ trong các bài tiểu luận và tóm tắt bằng tiếng Anh."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Số byte UTF-8 để làm gì?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Các trường, biểu mẫu và API cơ sở dữ liệu thường giới hạn độ dài theo byte. Một chữ cái Latin chiếm 1 byte và một ký tự Trung Quốc thường chiếm 3, vì vậy việc đếm byte giúp bạn tránh bị cắt ngắn."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Ngôn ngữ: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <strong>Tiếng Việt</strong> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>Bộ đếm từ &amp; chuyển đổi văn bản trực tuyến</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_vi.webp"><img src="/img/cover_vi.png" alt="Minh họa bộ đếm từ trực tuyến và trình chuyển đổi văn bản" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Hình: bộ đếm từ và trình chuyển đổi văn bản trực tuyến (từ, ký tự, đoạn văn của CJK &amp; Latin)</figcaption></figure>
+<p>Dán văn bản của bạn vào hộp bên dưới để xem các ký tự, ký tự tiếng Trung, từ tiếng Anh, dòng, đoạn văn và byte UTF-8 được cập nhật trong <strong>thời gian thực</strong> và chuyển đổi chữ hoa, chữ hoa, khoảng trắng và dòng trống chỉ bằng một cú nhấp chuột. Mọi thứ chạy cục bộ trong trình duyệt của bạn và <strong>không có gì được tải lên</strong> - lý tưởng để kiểm tra bài luận, sơ yếu lý lịch, biểu mẫu, bài đăng trên mạng xã hội và tài liệu WPS.</p>
+<textarea id="wc-input" placeholder="Dán hoặc nhập văn bản vào đây - số lượng cập nhật khi bạn nhập..." autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">Ký tự (có dấu cách)</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">Ký tự (không có dấu cách)</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">ký tự Trung Quốc</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">Từ (ký tự CJK + từ phương Tây)</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">dòng</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">Đoạn văn</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">byte UTF-8</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">Thời gian đọc</div></div></div>
+<h2>Chuyển đổi văn bản</h2>
+<div class="ops"><button data-op="upper">CHỮ HOA</button><button data-op="lower">chữ thường</button><button data-op="title">Trường hợp tiêu đề</button><button data-op="sentence">Trường hợp câu</button><button data-op="trim">Cắt bớt khoảng cách dòng</button><button data-op="collapse">Thu gọn không gian</button><button data-op="blank">Xóa các dòng trống</button><button data-op="sort">Sắp xếp dòng</button><button data-op="copy" class="pri">Sao chép kết quả</button><button data-op="clear">Xóa</button></div>
+<h2>Cách tính số đếm</h2>
+<p>Trước tiên, công cụ này chia văn bản thành các dòng và đoạn bằng cách ngắt dòng, sau đó quét từng ký tự: mọi thứ trong hệ thống chữ tượng hình CJK, kana hoặc Hangul đều được tính là một ký tự tiếng Trung, trong khi mỗi ký tự được phân cách bằng khoảng trắng ở nơi khác được tính là một từ phương Tây. Điều này khớp với logic "ký tự tiếng Trung và từ tiếng Hàn" cộng với "từ tiếng Anh" trong số từ WPS và Microsoft Word, do đó văn bản hỗn hợp cũng được tính chính xác.</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hình 1: nhập liệu -> quét từng ký tự -> phân loại (char CJK/từ Tây) -> tổng số" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Nhập văn bản</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Quét từng ký tự</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Phân loại: CJK cha</text><text x="502" y="98" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">r/từ Tây</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">Tổng số</text></svg><figcaption>Hình 1: nhập liệu -&gt; quét từng ký tự -&gt; phân loại (char CJK/từ Tây) -&gt; tổng số</figcaption></figure>
+<h2>Những gì được tính</h2>
+<p>Ký tự (có dấu cách) đếm mọi ký tự bao gồm dấu cách và dấu chấm câu; ký tự (không có dấu cách) loại bỏ tất cả khoảng trắng; Chữ Hán chỉ tính chữ tượng hình và kana/Hangul; các đoạn văn cách nhau bằng dòng trống. Các ký tự vô hình như CR/LF và tab ảnh hưởng đến số byte nhưng không được tính là từ theo mặc định.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_vi.webp"><img src="/img/board_vi.png" alt="Minh họa logic đếm từ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>Hình: mỗi ký tự CJK và một từ phương Tây đều được tính là 1, vì vậy văn bản hỗn hợp sẽ được tính chính xác</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hình 2: cách tính từng loại nội dung" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">Đếm logic</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">Ký tự CJK = 1 mỗi ký tự</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">Từ Tây = mỗi chữ 1</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">Dấu cách: tính là một ký tự, không phải một từ</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">Dòng trống = ngắt đoạn</text></svg><figcaption>Hình 2: cách tính từng loại nội dung</figcaption></figure>
+<h2 id="i4data">Ước tính tham khảo số từ và thời gian đọc (2026)</h2>
+<p>Một vài số liệu phổ biến giúp bạn đánh giá chiều dài trong nháy mắt. Thời gian đọc được ước tính bằng số từ chia cho tốc độ, mặc định là khoảng 200 từ mỗi phút.</p>
+<table class="data"><tbody>
+<tr><td>Tốc độ đọc thầm tiếng Anh</td><td>≈ 238 words/min</td><td class="note">từ phân tích tổng hợp về tỷ lệ đọc (Brysbaert, 2019)</td></tr>
+<tr><td>Tốc độ đọc tiếng Trung mặc định</td><td>≈ 255 chars/min</td><td class="note">ước tính chung của công chúng</td></tr>
+<tr><td>Một trang A4 (12pt, giãn cách đơn)</td><td>≈ 500 words / 800 chars</td><td class="note">ước tính sắp chữ điển hình</td></tr>
+<tr><td>Giới hạn ký tự bài đăng trên mạng xã hội (tham khảo)</td><td>280 / 140 characters</td><td class="note">quy tắc nền tảng công cộng, có thể thay đổi</td></tr>
+<tr><td>Độ dài hiển thị đoạn tìm kiếm</td><td>≈ 155 characters</td><td class="note">quy tắc ngón tay cái (khoảng 920 pixel)</td></tr>
+</tbody></table>
+<p class="note">Đây là những ước tính được tổng hợp từ các nguồn công khai, không phải số đo trực tiếp và chỉ mang tính chất tham khảo; quy tắc nền tảng có thể thay đổi theo thời gian.</p>
+<h2>Câu hỏi thường gặp</h2>
+<dl class="faq">
+<dt>Bộ đếm từ này có tải lên văn bản của tôi không?</dt><dd>Không. Tất cả việc đếm và chuyển đổi đều chạy cục bộ trong trình duyệt của bạn bằng JavaScript; văn bản của bạn không bao giờ được gửi đến bất kỳ máy chủ nào và sẽ bị xóa khi bạn đóng trang.</dd>
+<dt>Ký tự tiếng Trung được tính như thế nào?</dt><dd>Mỗi ký tự trong phạm vi chữ tượng hình, phần mở rộng, kana và Hangul của CJK được tính là một ký tự tiếng Trung, khớp với thước đo "ký tự tiếng Trung và từ tiếng Hàn" trong WPS và Word.</dd>
+<dt>Sự khác biệt giữa các từ và ký tự là gì?</dt><dd>Ký tự đếm mọi ký tự bao gồm dấu cách và dấu câu; từ bằng các ký tự Trung Quốc cộng với các từ phương Tây, gần với số lượng từ được sử dụng cho các bài tiểu luận hoặc viết trả phí.</dd>
+<dt>Nó có khớp với số từ WPS và Word không?</dt><dd>Đối với văn bản thuần tiếng Trung hoặc tiếng Anh thuần túy, nó thường khớp; với văn bản hỗn hợp, nhiều ký hiệu hoặc ký tự có độ rộng đầy đủ có thể có sự khác biệt nhỏ vì mỗi công cụ phân loại dấu câu và dấu cách hơi khác nhau.</dd>
+<dt>Nó có đếm được từ tiếng Anh không?</dt><dd>Đúng. Sau khi loại bỏ các ký tự CJK, mỗi dòng được phân cách bằng khoảng trắng là một từ phương Tây, rất hữu ích cho việc giới hạn số từ trong các bài tiểu luận và tóm tắt bằng tiếng Anh.</dd>
+<dt>Số byte UTF-8 để làm gì?</dt><dd>Các trường, biểu mẫu và API cơ sở dữ liệu thường giới hạn độ dài theo byte. Một chữ cái Latin chiếm 1 byte và một ký tự Trung Quốc thường chiếm 3, vì vậy việc đếm byte giúp bạn tránh bị cắt ngắn.</dd>
+</dl>
+<h2>Khi điều này hữu ích</h2>
+<ul class="scenes"><li>Kiểm tra xem một bài luận hoặc báo cáo có đáp ứng giới hạn từ hoặc ký tự bắt buộc hay không.</li><li>Cắt sơ yếu lý lịch thành một trang bằng cách xem số lượng ký tự và dòng.</li><li>Giữ các bài đăng trên mạng xã hội dưới giới hạn ký tự cho mỗi bài đăng để chúng không bị cắt bớt.</li><li>Giữ tiêu đề và mô tả SEO trong phạm vi ký tự được hiển thị.</li><li>Chuyển đổi chữ hoa và chữ hoa thành tiêu đề và tiêu đề tiếng Anh nhanh chóng.</li></ul>
+<div class="related"><h2>Liên kết liên quan</h2>
+<div class="cta">Bạn cần đếm từ đầy đủ hơn, bố cục và chỉnh sửa nhiều định dạng trên máy tính để bàn? Tải WPS Office: <a href="https://wpsofficepro.com/download/">Tải xuống WPS Office</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">Trang web chính thức của WPS</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">Tính năng WPS</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">Câu hỏi thường gặp về WPS</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">Phân đoạn văn bản Unicode (UAX #29)</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Trợ giúp đếm từ trong Microsoft Word</a></li></ul></div>
+</main>
+<footer>Evan Lin biên tập. Đếm tham chiếu logic Trợ giúp chính thức của WPS, tài liệu đếm từ Microsoft Word và tiêu chuẩn Phân đoạn văn bản Unicode (UAX #29), tất cả các nguồn công khai và chỉ để tham khảo. Công cụ này chạy hoàn toàn cục bộ và không tải lên gì cả.<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "phút", "copied": "Đã sao chép"};</script><script src="/app.js"></script>
+</body></html>
