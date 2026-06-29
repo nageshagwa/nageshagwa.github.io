@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字数カウント - 文字数・単語数・段落数を集計 + 大文字小文字変換</title>
+<meta name="description" content="無料のオンライン文字数・単語数カウントとテキスト変換。中国語の文字、英単語、文字数（スペース込み/抜き）、行数、段落、UTF-8 バイト数をリアルタイム集計し、大文字小文字・先頭大文字・空白/空行整理も対応。すべてローカル処理でアップロードなし、WPS など文書の文字数チェックに。">
+<link rel="canonical" href="https://nageshagwa.github.io/ja/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="文字数カウント - 文字数・単語数・段落数を集計 + 大文字小文字変換">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nageshagwa.github.io/">
+<link rel="alternate" hreflang="en" href="https://nageshagwa.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://nageshagwa.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nageshagwa.github.io/zh-tw/">
+<link rel="alternate" hreflang="id" href="https://nageshagwa.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://nageshagwa.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://nageshagwa.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://nageshagwa.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://nageshagwa.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://nageshagwa.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://nageshagwa.github.io/my/">
+<link rel="alternate" hreflang="th" href="https://nageshagwa.github.io/th/">
+<link rel="alternate" hreflang="x-default" href="https://nageshagwa.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "オンライン文字数カウント＆変換",
+   "url": "https://nageshagwa.github.io/ja/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "ja",
+   "description": "無料のオンライン文字数・単語数カウントとテキスト変換。中国語の文字、英単語、文字数（スペース込み/抜き）、行数、段落、UTF-8 バイト数をリアルタイム集計し、大文字小文字・先頭大文字・空白/空行整理も対応。すべてローカル処理でアップロードなし、WPS など文書の文字数チェックに。",
+   "isAccessibleForFree": true,
+   "browserRequirements": "Requires JavaScript",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Evan Lin"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ja",
+   "url": "https://nageshagwa.github.io/ja/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "この文字数カウントはテキストをアップロードしますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "いいえ。集計と変換はすべてブラウザ内の JavaScript でローカル処理され、テキストはどのサーバーにも送信されず、ページを閉じると消えます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "中国語文字はどう数えますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CJK 統合漢字・拡張・かな・ハングルの範囲の各文字を「中国語文字」として 1 と数え、WPS や Word の「中国語の文字と韓国語の単語」と同じ基準です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "「文字数」と「単語数」の違いは？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "文字数はスペースや句読点も含む各文字。単語数は中国語文字＋欧文単語で、論文や原稿料でいう「字数」に近い値です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "WPS や Word の文字数と一致しますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "純粋な中国語や英語のテキストでは通常一致します。混在・記号多数・全角文字があると、句読点や空白の分類差で数文字ずれることがあります。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "英単語数も数えられますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "はい。中国語文字を除いた後、空白で区切った連続片が欧文単語となり、英語論文や要旨の語数制限チェックに便利です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UTF-8 バイト数は何に使いますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "データベース項目・フォーム・API はバイト単位で長さ制限することが多く、英字 1 バイト・漢字は通常 3 バイトなので、超過による切り捨てを避けられます。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">言語： <a href="/">简体中文</a> · <a href="/en/">English</a> · <strong>日本語</strong> · <a href="/zh-tw/">繁體中文</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a> · <a href="/th/">ไทย</a></nav>
+<h1>オンライン文字数カウント＆テキスト変換</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ja.webp"><img src="/img/cover_ja.png" alt="オンライン文字数カウントとテキスト変換ツールの図" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>図：オンライン文字数カウントと変換（CJK・欧文の語数・文字・段落）</figcaption></figure>
+<p>下の入力欄にテキストを貼り付けると、文字数・中国語文字・英単語・行数・段落・UTF-8 バイト数が<strong>リアルタイム</strong>で表示され、大文字小文字・先頭大文字・空白整理・空行削除などをワンクリックで変換できます。すべてブラウザ内のローカル処理で<strong>アップロードはしません</strong>。論文・履歴書・フォーム・SNS 投稿・WPS 文書の文字数チェックに最適です。</p>
+<textarea id="wc-input" placeholder="ここにテキストを貼り付けまたは入力すると、集計がリアルタイムで更新されます…" autocomplete="off" spellcheck="false"></textarea>
+<div class="stats"><div class="stat"><div class="n" id="c-chars">0</div><div class="l">文字数（スペース込み）</div></div><div class="stat"><div class="n" id="c-nospace">0</div><div class="l">文字数（スペース抜き）</div></div><div class="stat"><div class="n" id="c-cjk">0</div><div class="l">中国語文字</div></div><div class="stat"><div class="n" id="c-words">0</div><div class="l">文字数（CJK 文字＋欧文単語）</div></div><div class="stat"><div class="n" id="c-lines">0</div><div class="l">行数</div></div><div class="stat"><div class="n" id="c-paras">0</div><div class="l">段落</div></div><div class="stat"><div class="n" id="c-bytes">0</div><div class="l">UTF-8 バイト</div></div><div class="stat"><div class="n" id="c-read">0</div><div class="l">読了目安</div></div></div>
+<h2>テキスト変換</h2>
+<div class="ops"><button data-op="upper">大文字</button><button data-op="lower">小文字</button><button data-op="title">各単語の先頭大文字</button><button data-op="sentence">文頭のみ大文字</button><button data-op="trim">行頭行末の空白除去</button><button data-op="collapse">連続スペース整理</button><button data-op="blank">空行を削除</button><button data-op="sort">行で並べ替え</button><button data-op="copy" class="pri">結果をコピー</button><button data-op="clear">クリア</button></div>
+<h2>集計の仕組み</h2>
+<p>まず改行で行と段落に分け、次に 1 文字ずつ走査します。CJK 統合漢字・かな・ハングルの範囲にある文字は「中国語文字」として各 1、それ以外は空白で区切った連続片を欧文単語として各 1 と数えます。これは WPS や Microsoft Word の文字数カウントにおける「中国語の文字と韓国語の単語」＋「英単語」の数え方と同じで、混在テキストも正確に数えられます。</p>
+<figure><svg viewBox="0 0 860 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1：入力 → 1 文字ずつ走査 → 分類（CJK 文字 / 欧文単語）→ 集計" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="150" rx="14" fill="#f7f9ff" stroke="#e1e9fb"/><rect x="14" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="102" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">入力テキスト</text><path d="M194 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="214" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="302" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">1 文字ずつ走査</text><path d="M394 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="414" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="502" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">分類：CJK 文字 / 欧文単語</text><path d="M594 75 l16 0 m-6 -5 l6 5 l-6 5" stroke="#1f69e0" stroke-width="2" fill="none"/><rect x="614" y="44" width="176" height="62" rx="12" fill="#fff" stroke="#1f69e0"/><text x="702" y="80" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#0c1a33">集計</text></svg><figcaption>図1：入力 → 1 文字ずつ走査 → 分類（CJK 文字 / 欧文単語）→ 集計</figcaption></figure>
+<h2>何が数えられるか</h2>
+<p>文字数（スペース込み）はスペースや句読点も含め全文字を数えます。スペース抜きは空白をすべて除外。中国語文字は表意文字とかな/ハングルのみ。段落は空行で区切ります。CR/LF やタブなどの不可視文字はバイト数に影響しますが、既定では「単語数」には数えません。</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ja.webp"><img src="/img/board_ja.png" alt="文字数の数え方の図" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e8ebf2"></picture><figcaption>図：CJK 文字と欧文単語を各 1 と数え、混在テキストも正確に</figcaption></figure>
+<figure><svg viewBox="0 0 860 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2：各種の内容がどう数えられるか" style="width:100%;height:auto"><rect x="0" y="0" width="860" height="196" rx="14" fill="#fbfcff" stroke="#e1e9fb"/><text x="20" y="30" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#0c1a33">数え方</text><rect x="20" y="52" width="20" height="20" rx="5" fill="#1f69e0"/><text x="50" y="67" font-family="system-ui,Arial" font-size="14" fill="#23303f">CJK 文字 = 各 1</text><rect x="20" y="86" width="20" height="20" rx="5" fill="#00a06d"/><text x="50" y="101" font-family="system-ui,Arial" font-size="14" fill="#23303f">欧文単語 = 各 1</text><rect x="20" y="120" width="20" height="20" rx="5" fill="#9aa3b5"/><text x="50" y="135" font-family="system-ui,Arial" font-size="14" fill="#23303f">スペース：文字数に算入、単語数には不算入</text><rect x="20" y="154" width="20" height="20" rx="5" fill="#e2922b"/><text x="50" y="169" font-family="system-ui,Arial" font-size="14" fill="#23303f">空行 = 段落の区切り</text></svg><figcaption>図2：各種の内容がどう数えられるか</figcaption></figure>
+<h2 id="i4data">文字数と読了時間の参考目安（2026）</h2>
+<p>よく使う目安をいくつか挙げます。読了時間は「単語数 ÷ 速度」で概算し、既定で毎分約 200 語としています。</p>
+<table class="data"><tbody>
+<tr><td>英語の黙読速度</td><td>≈ 238 語/分</td><td class="note">読書速度のメタ分析より（Brysbaert, 2019）</td></tr>
+<tr><td>中国語の既定読書速度</td><td>≈ 255 字/分</td><td class="note">一般的な公開目安</td></tr>
+<tr><td>A4 1 ページ（12pt 行間 1）</td><td>≈ 500 語 / 800 字</td><td class="note">一般的な組版目安</td></tr>
+<tr><td>SNS 1 投稿の文字上限（参考）</td><td>280 / 140 文字</td><td class="note">各社の公開規則・変動あり</td></tr>
+<tr><td>検索スニペット表示長</td><td>≈ 155 文字</td><td class="note">経験則（約 920 ピクセル）</td></tr>
+</tbody></table>
+<p class="note">以上は公開資料に基づく概算であり一次実測ではありません。参考用で、各プラットフォームの規則は変わる場合があります。</p>
+<h2>よくある質問</h2>
+<dl class="faq">
+<dt>この文字数カウントはテキストをアップロードしますか？</dt><dd>いいえ。集計と変換はすべてブラウザ内の JavaScript でローカル処理され、テキストはどのサーバーにも送信されず、ページを閉じると消えます。</dd>
+<dt>中国語文字はどう数えますか？</dt><dd>CJK 統合漢字・拡張・かな・ハングルの範囲の各文字を「中国語文字」として 1 と数え、WPS や Word の「中国語の文字と韓国語の単語」と同じ基準です。</dd>
+<dt>「文字数」と「単語数」の違いは？</dt><dd>文字数はスペースや句読点も含む各文字。単語数は中国語文字＋欧文単語で、論文や原稿料でいう「字数」に近い値です。</dd>
+<dt>WPS や Word の文字数と一致しますか？</dt><dd>純粋な中国語や英語のテキストでは通常一致します。混在・記号多数・全角文字があると、句読点や空白の分類差で数文字ずれることがあります。</dd>
+<dt>英単語数も数えられますか？</dt><dd>はい。中国語文字を除いた後、空白で区切った連続片が欧文単語となり、英語論文や要旨の語数制限チェックに便利です。</dd>
+<dt>UTF-8 バイト数は何に使いますか？</dt><dd>データベース項目・フォーム・API はバイト単位で長さ制限することが多く、英字 1 バイト・漢字は通常 3 バイトなので、超過による切り捨てを避けられます。</dd>
+</dl>
+<h2>こんなときに便利</h2>
+<ul class="scenes"><li>論文やレポートが規定の字数・語数を満たすか確認する。</li><li>文字数と行数を見ながら履歴書を 1 ページに収める。</li><li>SNS 投稿を 1 件あたりの文字上限内に収め、切れないようにする。</li><li>SEO のタイトルと説明を表示範囲内の文字数に収める。</li><li>大文字小文字・先頭大文字の変換で英語の見出しや表頭を整える。</li></ul>
+<div class="related"><h2>関連リンク</h2>
+<div class="cta">デスクトップでより本格的な文字数集計・組版・多形式編集が必要なら、WPS Office をどうぞ： <a href="https://wpsofficepro.com/download/">WPS Office をダウンロード</a></div>
+<ul><li><a href="https://wpsofficepro.com/" rel="nofollow noopener" target="_blank">WPS 公式サイト</a></li><li><a href="https://wpsofficepro.com/features/" rel="nofollow noopener" target="_blank">WPS の機能</a></li><li><a href="https://wpsofficepro.com/faq/" rel="nofollow noopener" target="_blank">WPS よくある質問</a></li><li><a href="https://www.unicode.org/reports/tr29/" rel="nofollow noopener" target="_blank">Unicode テキスト分割（UAX #29）</a></li><li><a href="https://support.microsoft.com/en-us/office/show-word-count-3c9e6a11-a04d-43b4-977c-563a0e0d5da3" rel="nofollow noopener" target="_blank">Microsoft Word 文字数カウントのヘルプ</a></li></ul></div>
+</main>
+<footer>編集：Evan Lin。数え方は WPS 公式ヘルプ、Microsoft Word の文字数カウント説明、Unicode テキスト分割標準（UAX #29）を参考にしています。いずれも公開資料で参考用です。本ツールは完全にローカルで動作し、テキストをアップロードしません。<br><a href="/about-editor/">Evan Lin</a> · MIT License</footer>
+</div>
+<script>window.I18N={"readUnit": "分", "copied": "コピーしました"};</script><script src="/app.js"></script>
+</body></html>
